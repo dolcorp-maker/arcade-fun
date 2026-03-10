@@ -420,6 +420,19 @@
     },
   ];
 
+  const PLAYS_KEY = 'arcade-hub-plays';
+
+  function getPlays() {
+    try { return JSON.parse(localStorage.getItem(PLAYS_KEY) || '{}'); }
+    catch { return {}; }
+  }
+
+  function incrementPlays(gameId) {
+    const plays = getPlays();
+    plays[gameId] = (plays[gameId] || 0) + 1;
+    localStorage.setItem(PLAYS_KEY, JSON.stringify(plays));
+  }
+
   function renderCards(games) {
     const grid = document.getElementById('grid');
     const noResults = document.getElementById('no-results');
@@ -437,6 +450,11 @@
       const card = document.createElement('a');
       card.className = 'game-card';
       card.href = `games/${game.folder}/index.html`;
+      card.addEventListener('click', (e) => {
+        e.preventDefault();
+        incrementPlays(game.id);
+        window.location.href = card.href;
+      });
       card.innerHTML = `
         <div class="card-thumb">${game.emoji}</div>
         <div class="card-body">
@@ -456,17 +474,22 @@
 
   function filterGames() {
     const q = document.getElementById('search').value.toLowerCase();
-    const filtered = GAMES.filter(g =>
-      g.title.toLowerCase().includes(q) ||
-      g.description.toLowerCase().includes(q) ||
-      g.tag.toLowerCase().includes(q)
-    );
+    const savedPlays = getPlays();
+    const filtered = GAMES
+      .filter(g =>
+        g.title.toLowerCase().includes(q) ||
+        g.description.toLowerCase().includes(q) ||
+        g.tag.toLowerCase().includes(q)
+      )
+      .map(g => ({ ...g, plays: savedPlays[g.id] || 0 }));
     renderCards(filtered);
   }
 
   // Init
   document.getElementById('game-count').textContent = GAMES.length;
-  renderCards(GAMES);
+  const savedPlays = getPlays();
+  const gamesWithPlays = GAMES.map(g => ({ ...g, plays: savedPlays[g.id] || 0 }));
+  renderCards(gamesWithPlays);
 </script>
 </body>
 </html>
