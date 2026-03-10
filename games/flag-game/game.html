@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flag Flow Arena — Game</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/game.css" />
+</head>
+<body>
+
+<header class="game-topbar">
+  <div class="game-topbar-left">
+    <button class="btn-ghost" id="backBtn">← Dashboard</button>
+    <div class="player-badge">
+      <span class="avatar" id="topPlayerIcon">🎮</span>
+      <span id="topPlayerName">Player</span>
+    </div>
+  </div>
+  <div class="game-topbar-right">
+    <span class="pill" id="modePill">Chill</span>
+    <span class="pill blue" id="typePill">Flag</span>
+  </div>
+</header>
+
+<div class="game-wrap">
+
+  <!-- PREP PANEL -->
+  <div id="prepPanel">
+    <div class="prep-panel">
+      <h2 id="prepTitle">Ready?</h2>
+
+      <div class="prep-summary" id="prepSummary">
+        <div class="prep-row">
+          <span class="prep-label" id="prepPlayerLabel">Player</span>
+          <span class="prep-value" id="prepPlayerValue">—</span>
+        </div>
+        <div class="prep-row">
+          <span class="prep-label" id="prepModeLabel">Mode</span>
+          <span class="prep-value" id="prepModeValue">—</span>
+        </div>
+        <div class="prep-row">
+          <span class="prep-label" id="prepTypeLabel">Game Type</span>
+          <span class="prep-value" id="prepTypeValue">—</span>
+        </div>
+        <div class="prep-row" id="prepContinentRow" style="display:none;">
+          <span class="prep-label" id="prepContinentLabel">Continent</span>
+          <span class="prep-value">
+            <select id="continentSelect" style="width:auto;padding:0.3rem 0.6rem;font-size:0.9rem;"></select>
+          </span>
+        </div>
+      </div>
+
+      <div class="prep-actions">
+        <button class="btn-primary" id="startBtn">▶ Start</button>
+        <button class="btn-ghost" id="zoomToggle">Expand flag</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME BOARD -->
+  <div id="gameBoard" class="game-board hidden">
+
+    <!-- Stats bar -->
+    <div class="game-stats" id="statsBar">
+      <!-- Bruce Lee stats -->
+      <div id="heartsWrap" style="display:none;">
+        <div class="hearts-bar" id="heartsBar">
+          <span class="heart" id="h1">❤️</span>
+          <span class="heart" id="h2">❤️</span>
+          <span class="heart" id="h3">❤️</span>
+        </div>
+      </div>
+      <div class="stat-box" id="scoreBox" style="display:none;">
+        <span class="stat-label" id="scoreLbl">Score</span>
+        <span class="stat-value" id="scoreVal">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label" id="streakLbl">Streak</span>
+        <span class="stat-value" id="streakVal">0</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label" id="correctLbl">Correct</span>
+        <span class="stat-value" id="correctVal">0</span>
+      </div>
+      <!-- Timer bar (bruce only) -->
+      <div class="timer-bar-wrap" id="timerBarWrap" style="display:none;">
+        <div class="timer-bar" id="timerBar"></div>
+      </div>
+      <div class="stat-box" id="timerBox" style="display:none;">
+        <span class="stat-label" id="timerLbl">Time</span>
+        <span class="stat-value" id="timerVal">8</span>
+      </div>
+    </div>
+
+    <!-- Prompt area -->
+    <div class="prompt-area" id="promptArea">
+      <!-- Flag prompt -->
+      <div id="flagStage" class="flag-stage hidden">
+        <img id="flagImg" src="" alt="flag" />
+        <button class="btn-ghost zoom-toggle" id="zoomInGame" title="Toggle size">⤢</button>
+      </div>
+      <!-- Text prompt (capitals) -->
+      <div id="textPrompt" class="text-prompt-card hidden">
+        <div class="text-prompt-label" id="textPromptLabel">What is the capital of</div>
+        <div class="text-prompt-value" id="textPromptValue">—</div>
+        <div class="text-prompt-continent hidden" id="textPromptContinent"></div>
+      </div>
+    </div>
+
+    <!-- Answers -->
+    <div class="answers" id="answersGrid"></div>
+
+    <!-- Bottom bar -->
+    <div class="game-bottom">
+      <div class="feedback neutral game-feedback" id="gameFeedback"></div>
+      <button class="btn-primary hidden" id="nextBtn">Next →</button>
+    </div>
+
+  </div>
+
+  <!-- Error state -->
+  <div id="errorPanel" class="hidden" style="padding:2rem;text-align:center;">
+    <p id="errorMsg" style="color:var(--red);"></p>
+    <a href="index.html" class="btn-ghost" style="margin-top:1rem;display:inline-block;">← Dashboard</a>
+  </div>
+
+</div>
+
+<!-- Game Over Overlay -->
+<div class="gameover-overlay hidden" id="gameoverOverlay">
+  <div class="gameover-card">
+    <div class="gameover-title" id="gameoverTitle">Game Over</div>
+    <div class="gameover-medals" id="gameoverMedals"></div>
+    <div class="gameover-stats" id="gameoverStats"></div>
+    <div class="gameover-actions">
+      <button class="btn-primary" id="playAgainBtn">▶ Play Again</button>
+      <button class="btn-ghost" id="backToDashBtn">← Dashboard</button>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/utils.js"></script>
+<script src="scripts/i18n.js"></script>
+<script src="scripts/storage.js"></script>
+<script src="scripts/data.js"></script>
+<script src="scripts/achievements.js"></script>
+<script src="scripts/scoring.js"></script>
+<script src="scripts/game.js"></script>
+</body>
+</html>

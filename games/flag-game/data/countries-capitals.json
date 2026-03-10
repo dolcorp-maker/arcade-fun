@@ -1,0 +1,1570 @@
+[
+  {
+    "code": "af",
+    "country": "Afghanistan",
+    "countryHe": "אפגניסטן",
+    "capital": "Kabul",
+    "capitalHe": "קאבול",
+    "continent": "Asia"
+  },
+  {
+    "code": "al",
+    "country": "Albania",
+    "countryHe": "אלבניה",
+    "capital": "Tirana",
+    "capitalHe": "טירנה",
+    "continent": "Europe"
+  },
+  {
+    "code": "dz",
+    "country": "Algeria",
+    "countryHe": "אלג'יריה",
+    "capital": "Algiers",
+    "capitalHe": "אלג'יר",
+    "continent": "Africa"
+  },
+  {
+    "code": "ad",
+    "country": "Andorra",
+    "countryHe": "אנדורה",
+    "capital": "Andorra la Vella",
+    "capitalHe": "אנדורה לה וולה",
+    "continent": "Europe"
+  },
+  {
+    "code": "ao",
+    "country": "Angola",
+    "countryHe": "אנגולה",
+    "capital": "Luanda",
+    "capitalHe": "לואנדה",
+    "continent": "Africa"
+  },
+  {
+    "code": "ag",
+    "country": "Antigua and Barbuda",
+    "countryHe": "אנטיגואה וברבודה",
+    "capital": "Saint John's",
+    "capitalHe": "סנט ג'ון",
+    "continent": "North America"
+  },
+  {
+    "code": "ar",
+    "country": "Argentina",
+    "countryHe": "ארגנטינה",
+    "capital": "Buenos Aires",
+    "capitalHe": "בואנוס איירס",
+    "continent": "South America"
+  },
+  {
+    "code": "am",
+    "country": "Armenia",
+    "countryHe": "ארמניה",
+    "capital": "Yerevan",
+    "capitalHe": "ירוואן",
+    "continent": "Asia"
+  },
+  {
+    "code": "au",
+    "country": "Australia",
+    "countryHe": "אוסטרליה",
+    "capital": "Canberra",
+    "capitalHe": "קנברה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "at",
+    "country": "Austria",
+    "countryHe": "אוסטריה",
+    "capital": "Vienna",
+    "capitalHe": "וינה",
+    "continent": "Europe"
+  },
+  {
+    "code": "az",
+    "country": "Azerbaijan",
+    "countryHe": "אזרבייג'ן",
+    "capital": "Baku",
+    "capitalHe": "באקו",
+    "continent": "Asia"
+  },
+  {
+    "code": "bs",
+    "country": "Bahamas",
+    "countryHe": "הבהאמות",
+    "capital": "Nassau",
+    "capitalHe": "נסאו",
+    "continent": "North America"
+  },
+  {
+    "code": "bh",
+    "country": "Bahrain",
+    "countryHe": "בחריין",
+    "capital": "Manama",
+    "capitalHe": "מנאמה",
+    "continent": "Asia"
+  },
+  {
+    "code": "bd",
+    "country": "Bangladesh",
+    "countryHe": "בנגלדש",
+    "capital": "Dhaka",
+    "capitalHe": "דאקה",
+    "continent": "Asia"
+  },
+  {
+    "code": "bb",
+    "country": "Barbados",
+    "countryHe": "ברבדוס",
+    "capital": "Bridgetown",
+    "capitalHe": "ברידג'טאון",
+    "continent": "North America"
+  },
+  {
+    "code": "by",
+    "country": "Belarus",
+    "countryHe": "בלארוס",
+    "capital": "Minsk",
+    "capitalHe": "מינסק",
+    "continent": "Europe"
+  },
+  {
+    "code": "be",
+    "country": "Belgium",
+    "countryHe": "בלגיה",
+    "capital": "Brussels",
+    "capitalHe": "בריסל",
+    "continent": "Europe"
+  },
+  {
+    "code": "bz",
+    "country": "Belize",
+    "countryHe": "בליז",
+    "capital": "Belmopan",
+    "capitalHe": "בלמופן",
+    "continent": "North America"
+  },
+  {
+    "code": "bj",
+    "country": "Benin",
+    "countryHe": "בנין",
+    "capital": "Porto-Novo",
+    "capitalHe": "פורטו נובו",
+    "continent": "Africa"
+  },
+  {
+    "code": "bt",
+    "country": "Bhutan",
+    "countryHe": "בהוטן",
+    "capital": "Thimphu",
+    "capitalHe": "תימפו",
+    "continent": "Asia"
+  },
+  {
+    "code": "bo",
+    "country": "Bolivia",
+    "countryHe": "בוליביה",
+    "capital": "Sucre",
+    "capitalHe": "סוקרה",
+    "continent": "South America"
+  },
+  {
+    "code": "ba",
+    "country": "Bosnia and Herzegovina",
+    "countryHe": "בוסניה והרצגובינה",
+    "capital": "Sarajevo",
+    "capitalHe": "סרייבו",
+    "continent": "Europe"
+  },
+  {
+    "code": "bw",
+    "country": "Botswana",
+    "countryHe": "בוצוואנה",
+    "capital": "Gaborone",
+    "capitalHe": "גבורונה",
+    "continent": "Africa"
+  },
+  {
+    "code": "br",
+    "country": "Brazil",
+    "countryHe": "ברזיל",
+    "capital": "Brasilia",
+    "capitalHe": "ברזיליה",
+    "continent": "South America"
+  },
+  {
+    "code": "bn",
+    "country": "Brunei",
+    "countryHe": "ברוניי",
+    "capital": "Bandar Seri Begawan",
+    "capitalHe": "בנדר סרי בגאוואן",
+    "continent": "Asia"
+  },
+  {
+    "code": "bg",
+    "country": "Bulgaria",
+    "countryHe": "בולגריה",
+    "capital": "Sofia",
+    "capitalHe": "סופיה",
+    "continent": "Europe"
+  },
+  {
+    "code": "bf",
+    "country": "Burkina Faso",
+    "countryHe": "בורקינה פאסו",
+    "capital": "Ouagadougou",
+    "capitalHe": "וואגדוגו",
+    "continent": "Africa"
+  },
+  {
+    "code": "bi",
+    "country": "Burundi",
+    "countryHe": "בורונדי",
+    "capital": "Gitega",
+    "capitalHe": "גיטגה",
+    "continent": "Africa"
+  },
+  {
+    "code": "kh",
+    "country": "Cambodia",
+    "countryHe": "קמבודיה",
+    "capital": "Phnom Penh",
+    "capitalHe": "פנום פן",
+    "continent": "Asia"
+  },
+  {
+    "code": "cm",
+    "country": "Cameroon",
+    "countryHe": "קמרון",
+    "capital": "Yaounde",
+    "capitalHe": "יאונדה",
+    "continent": "Africa"
+  },
+  {
+    "code": "ca",
+    "country": "Canada",
+    "countryHe": "קנדה",
+    "capital": "Ottawa",
+    "capitalHe": "אוטווה",
+    "continent": "North America"
+  },
+  {
+    "code": "cv",
+    "country": "Cape Verde",
+    "countryHe": "כף ורדה",
+    "capital": "Praia",
+    "capitalHe": "פראיה",
+    "continent": "Africa"
+  },
+  {
+    "code": "cf",
+    "country": "Central African Republic",
+    "countryHe": "הרפובליקה המרכז-אפריקנית",
+    "capital": "Bangui",
+    "capitalHe": "בנגי",
+    "continent": "Africa"
+  },
+  {
+    "code": "td",
+    "country": "Chad",
+    "countryHe": "צ'אד",
+    "capital": "N'Djamena",
+    "capitalHe": "נ'ג'מנה",
+    "continent": "Africa"
+  },
+  {
+    "code": "cl",
+    "country": "Chile",
+    "countryHe": "צ'ילה",
+    "capital": "Santiago",
+    "capitalHe": "סנטיאגו",
+    "continent": "South America"
+  },
+  {
+    "code": "cn",
+    "country": "China",
+    "countryHe": "סין",
+    "capital": "Beijing",
+    "capitalHe": "בייג'ינג",
+    "continent": "Asia"
+  },
+  {
+    "code": "co",
+    "country": "Colombia",
+    "countryHe": "קולומביה",
+    "capital": "Bogota",
+    "capitalHe": "בוגוטה",
+    "continent": "South America"
+  },
+  {
+    "code": "km",
+    "country": "Comoros",
+    "countryHe": "קומורו",
+    "capital": "Moroni",
+    "capitalHe": "מורוני",
+    "continent": "Africa"
+  },
+  {
+    "code": "cr",
+    "country": "Costa Rica",
+    "countryHe": "קוסטה ריקה",
+    "capital": "San Jose",
+    "capitalHe": "סן חוזה",
+    "continent": "North America"
+  },
+  {
+    "code": "hr",
+    "country": "Croatia",
+    "countryHe": "קרואטיה",
+    "capital": "Zagreb",
+    "capitalHe": "זאגרב",
+    "continent": "Europe"
+  },
+  {
+    "code": "cu",
+    "country": "Cuba",
+    "countryHe": "קובה",
+    "capital": "Havana",
+    "capitalHe": "הוואנה",
+    "continent": "North America"
+  },
+  {
+    "code": "cy",
+    "country": "Cyprus",
+    "countryHe": "קפריסין",
+    "capital": "Nicosia",
+    "capitalHe": "ניקוסיה",
+    "continent": "Europe"
+  },
+  {
+    "code": "cz",
+    "country": "Czech Republic",
+    "countryHe": "צ'כיה",
+    "capital": "Prague",
+    "capitalHe": "פראג",
+    "continent": "Europe"
+  },
+  {
+    "code": "cd",
+    "country": "DR Congo",
+    "countryHe": "קונגו הדמוקרטית",
+    "capital": "Kinshasa",
+    "capitalHe": "קינשאסה",
+    "continent": "Africa"
+  },
+  {
+    "code": "dk",
+    "country": "Denmark",
+    "countryHe": "דנמרק",
+    "capital": "Copenhagen",
+    "capitalHe": "קופנהגן",
+    "continent": "Europe"
+  },
+  {
+    "code": "dj",
+    "country": "Djibouti",
+    "countryHe": "ג'יבוטי",
+    "capital": "Djibouti",
+    "capitalHe": "ג'יבוטי",
+    "continent": "Africa"
+  },
+  {
+    "code": "dm",
+    "country": "Dominica",
+    "countryHe": "דומיניקה",
+    "capital": "Roseau",
+    "capitalHe": "רוזו",
+    "continent": "North America"
+  },
+  {
+    "code": "do",
+    "country": "Dominican Republic",
+    "countryHe": "הרפובליקה הדומיניקנית",
+    "capital": "Santo Domingo",
+    "capitalHe": "סנטו דומינגו",
+    "continent": "North America"
+  },
+  {
+    "code": "ec",
+    "country": "Ecuador",
+    "countryHe": "אקוודור",
+    "capital": "Quito",
+    "capitalHe": "קיטו",
+    "continent": "South America"
+  },
+  {
+    "code": "eg",
+    "country": "Egypt",
+    "countryHe": "מצרים",
+    "capital": "Cairo",
+    "capitalHe": "קהיר",
+    "continent": "Africa"
+  },
+  {
+    "code": "sv",
+    "country": "El Salvador",
+    "countryHe": "אל סלבדור",
+    "capital": "San Salvador",
+    "capitalHe": "סן סלבדור",
+    "continent": "North America"
+  },
+  {
+    "code": "gq",
+    "country": "Equatorial Guinea",
+    "countryHe": "גינאה המשוונית",
+    "capital": "Malabo",
+    "capitalHe": "מלאבו",
+    "continent": "Africa"
+  },
+  {
+    "code": "er",
+    "country": "Eritrea",
+    "countryHe": "אריתריאה",
+    "capital": "Asmara",
+    "capitalHe": "אסמרה",
+    "continent": "Africa"
+  },
+  {
+    "code": "ee",
+    "country": "Estonia",
+    "countryHe": "אסטוניה",
+    "capital": "Tallinn",
+    "capitalHe": "טאלין",
+    "continent": "Europe"
+  },
+  {
+    "code": "sz",
+    "country": "Eswatini",
+    "countryHe": "אסווטיני",
+    "capital": "Mbabane",
+    "capitalHe": "מבאבנה",
+    "continent": "Africa"
+  },
+  {
+    "code": "et",
+    "country": "Ethiopia",
+    "countryHe": "אתיופיה",
+    "capital": "Addis Ababa",
+    "capitalHe": "אדיס אבבה",
+    "continent": "Africa"
+  },
+  {
+    "code": "fj",
+    "country": "Fiji",
+    "countryHe": "פיג'י",
+    "capital": "Suva",
+    "capitalHe": "סובה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "fi",
+    "country": "Finland",
+    "countryHe": "פינלנד",
+    "capital": "Helsinki",
+    "capitalHe": "הלסינקי",
+    "continent": "Europe"
+  },
+  {
+    "code": "fr",
+    "country": "France",
+    "countryHe": "צרפת",
+    "capital": "Paris",
+    "capitalHe": "פריז",
+    "continent": "Europe"
+  },
+  {
+    "code": "ga",
+    "country": "Gabon",
+    "countryHe": "גבון",
+    "capital": "Libreville",
+    "capitalHe": "ליברוויל",
+    "continent": "Africa"
+  },
+  {
+    "code": "gm",
+    "country": "Gambia",
+    "countryHe": "גמביה",
+    "capital": "Banjul",
+    "capitalHe": "בנג'ול",
+    "continent": "Africa"
+  },
+  {
+    "code": "ge",
+    "country": "Georgia",
+    "countryHe": "גאורגיה",
+    "capital": "Tbilisi",
+    "capitalHe": "טביליסי",
+    "continent": "Asia"
+  },
+  {
+    "code": "de",
+    "country": "Germany",
+    "countryHe": "גרמניה",
+    "capital": "Berlin",
+    "capitalHe": "ברלין",
+    "continent": "Europe"
+  },
+  {
+    "code": "gh",
+    "country": "Ghana",
+    "countryHe": "גאנה",
+    "capital": "Accra",
+    "capitalHe": "אקרה",
+    "continent": "Africa"
+  },
+  {
+    "code": "gr",
+    "country": "Greece",
+    "countryHe": "יוון",
+    "capital": "Athens",
+    "capitalHe": "אתונה",
+    "continent": "Europe"
+  },
+  {
+    "code": "gd",
+    "country": "Grenada",
+    "countryHe": "גרנדה",
+    "capital": "Saint George's",
+    "capitalHe": "סנט ג'ורג'",
+    "continent": "North America"
+  },
+  {
+    "code": "gt",
+    "country": "Guatemala",
+    "countryHe": "גואטמלה",
+    "capital": "Guatemala City",
+    "capitalHe": "גואטמלה סיטי",
+    "continent": "North America"
+  },
+  {
+    "code": "gn",
+    "country": "Guinea",
+    "countryHe": "גינאה",
+    "capital": "Conakry",
+    "capitalHe": "קונקרי",
+    "continent": "Africa"
+  },
+  {
+    "code": "gw",
+    "country": "Guinea-Bissau",
+    "countryHe": "גינאה-ביסאו",
+    "capital": "Bissau",
+    "capitalHe": "ביסאו",
+    "continent": "Africa"
+  },
+  {
+    "code": "gy",
+    "country": "Guyana",
+    "countryHe": "גיאנה",
+    "capital": "Georgetown",
+    "capitalHe": "ג'ורג'טאון",
+    "continent": "South America"
+  },
+  {
+    "code": "ht",
+    "country": "Haiti",
+    "countryHe": "האיטי",
+    "capital": "Port-au-Prince",
+    "capitalHe": "פורט-או-פרנס",
+    "continent": "North America"
+  },
+  {
+    "code": "hn",
+    "country": "Honduras",
+    "countryHe": "הונדורס",
+    "capital": "Tegucigalpa",
+    "capitalHe": "טגוסיגלפה",
+    "continent": "North America"
+  },
+  {
+    "code": "hu",
+    "country": "Hungary",
+    "countryHe": "הונגריה",
+    "capital": "Budapest",
+    "capitalHe": "בודפשט",
+    "continent": "Europe"
+  },
+  {
+    "code": "is",
+    "country": "Iceland",
+    "countryHe": "איסלנד",
+    "capital": "Reykjavik",
+    "capitalHe": "רייקיאוויק",
+    "continent": "Europe"
+  },
+  {
+    "code": "in",
+    "country": "India",
+    "countryHe": "הודו",
+    "capital": "New Delhi",
+    "capitalHe": "ניו דלהי",
+    "continent": "Asia"
+  },
+  {
+    "code": "id",
+    "country": "Indonesia",
+    "countryHe": "אינדונזיה",
+    "capital": "Jakarta",
+    "capitalHe": "ג'קרטה",
+    "continent": "Asia"
+  },
+  {
+    "code": "ir",
+    "country": "Iran",
+    "countryHe": "איראן",
+    "capital": "Tehran",
+    "capitalHe": "טהרן",
+    "continent": "Asia"
+  },
+  {
+    "code": "iq",
+    "country": "Iraq",
+    "countryHe": "עיראק",
+    "capital": "Baghdad",
+    "capitalHe": "בגדד",
+    "continent": "Asia"
+  },
+  {
+    "code": "ie",
+    "country": "Ireland",
+    "countryHe": "אירלנד",
+    "capital": "Dublin",
+    "capitalHe": "דבלין",
+    "continent": "Europe"
+  },
+  {
+    "code": "il",
+    "country": "Israel",
+    "countryHe": "ישראל",
+    "capital": "Jerusalem",
+    "capitalHe": "ירושלים",
+    "continent": "Asia"
+  },
+  {
+    "code": "it",
+    "country": "Italy",
+    "countryHe": "איטליה",
+    "capital": "Rome",
+    "capitalHe": "רומא",
+    "continent": "Europe"
+  },
+  {
+    "code": "ci",
+    "country": "Ivory Coast",
+    "countryHe": "חוף השנהב",
+    "capital": "Yamoussoukro",
+    "capitalHe": "יאמוסוקרו",
+    "continent": "Africa"
+  },
+  {
+    "code": "jm",
+    "country": "Jamaica",
+    "countryHe": "ג'מייקה",
+    "capital": "Kingston",
+    "capitalHe": "קינגסטון",
+    "continent": "North America"
+  },
+  {
+    "code": "jp",
+    "country": "Japan",
+    "countryHe": "יפן",
+    "capital": "Tokyo",
+    "capitalHe": "טוקיו",
+    "continent": "Asia"
+  },
+  {
+    "code": "jo",
+    "country": "Jordan",
+    "countryHe": "ירדן",
+    "capital": "Amman",
+    "capitalHe": "עמאן",
+    "continent": "Asia"
+  },
+  {
+    "code": "kz",
+    "country": "Kazakhstan",
+    "countryHe": "קזחסטן",
+    "capital": "Astana",
+    "capitalHe": "אסטנה",
+    "continent": "Asia"
+  },
+  {
+    "code": "ke",
+    "country": "Kenya",
+    "countryHe": "קניה",
+    "capital": "Nairobi",
+    "capitalHe": "ניירובי",
+    "continent": "Africa"
+  },
+  {
+    "code": "ki",
+    "country": "Kiribati",
+    "countryHe": "קיריבאטי",
+    "capital": "South Tarawa",
+    "capitalHe": "דרום טראווה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "xk",
+    "country": "Kosovo",
+    "countryHe": "קוסובו",
+    "capital": "Pristina",
+    "capitalHe": "פרישטינה",
+    "continent": "Europe"
+  },
+  {
+    "code": "kw",
+    "country": "Kuwait",
+    "countryHe": "כווית",
+    "capital": "Kuwait City",
+    "capitalHe": "כווית סיטי",
+    "continent": "Asia"
+  },
+  {
+    "code": "kg",
+    "country": "Kyrgyzstan",
+    "countryHe": "קירגיזסטן",
+    "capital": "Bishkek",
+    "capitalHe": "בישקק",
+    "continent": "Asia"
+  },
+  {
+    "code": "la",
+    "country": "Laos",
+    "countryHe": "לאוס",
+    "capital": "Vientiane",
+    "capitalHe": "ויינטיאן",
+    "continent": "Asia"
+  },
+  {
+    "code": "lv",
+    "country": "Latvia",
+    "countryHe": "לטביה",
+    "capital": "Riga",
+    "capitalHe": "ריגה",
+    "continent": "Europe"
+  },
+  {
+    "code": "lb",
+    "country": "Lebanon",
+    "countryHe": "לבנון",
+    "capital": "Beirut",
+    "capitalHe": "ביירות",
+    "continent": "Asia"
+  },
+  {
+    "code": "ls",
+    "country": "Lesotho",
+    "countryHe": "לסוטו",
+    "capital": "Maseru",
+    "capitalHe": "מסרו",
+    "continent": "Africa"
+  },
+  {
+    "code": "lr",
+    "country": "Liberia",
+    "countryHe": "ליבריה",
+    "capital": "Monrovia",
+    "capitalHe": "מונרוביה",
+    "continent": "Africa"
+  },
+  {
+    "code": "ly",
+    "country": "Libya",
+    "countryHe": "לוב",
+    "capital": "Tripoli",
+    "capitalHe": "טריפולי",
+    "continent": "Africa"
+  },
+  {
+    "code": "li",
+    "country": "Liechtenstein",
+    "countryHe": "ליכטנשטיין",
+    "capital": "Vaduz",
+    "capitalHe": "ואדוז",
+    "continent": "Europe"
+  },
+  {
+    "code": "lt",
+    "country": "Lithuania",
+    "countryHe": "ליטא",
+    "capital": "Vilnius",
+    "capitalHe": "וילנה",
+    "continent": "Europe"
+  },
+  {
+    "code": "lu",
+    "country": "Luxembourg",
+    "countryHe": "לוקסמבורג",
+    "capital": "Luxembourg City",
+    "capitalHe": "לוקסמבורג",
+    "continent": "Europe"
+  },
+  {
+    "code": "mg",
+    "country": "Madagascar",
+    "countryHe": "מדגסקר",
+    "capital": "Antananarivo",
+    "capitalHe": "אנטננריבו",
+    "continent": "Africa"
+  },
+  {
+    "code": "mw",
+    "country": "Malawi",
+    "countryHe": "מלאווי",
+    "capital": "Lilongwe",
+    "capitalHe": "לילונגווה",
+    "continent": "Africa"
+  },
+  {
+    "code": "my",
+    "country": "Malaysia",
+    "countryHe": "מלזיה",
+    "capital": "Kuala Lumpur",
+    "capitalHe": "קואלה לומפור",
+    "continent": "Asia"
+  },
+  {
+    "code": "mv",
+    "country": "Maldives",
+    "countryHe": "מלדיביים",
+    "capital": "Male",
+    "capitalHe": "מאלה",
+    "continent": "Asia"
+  },
+  {
+    "code": "ml",
+    "country": "Mali",
+    "countryHe": "מאלי",
+    "capital": "Bamako",
+    "capitalHe": "במאקו",
+    "continent": "Africa"
+  },
+  {
+    "code": "mt",
+    "country": "Malta",
+    "countryHe": "מלטה",
+    "capital": "Valletta",
+    "capitalHe": "ולטה",
+    "continent": "Europe"
+  },
+  {
+    "code": "mh",
+    "country": "Marshall Islands",
+    "countryHe": "איי מרשל",
+    "capital": "Majuro",
+    "capitalHe": "מג'ורו",
+    "continent": "Oceania"
+  },
+  {
+    "code": "mr",
+    "country": "Mauritania",
+    "countryHe": "מאוריטניה",
+    "capital": "Nouakchott",
+    "capitalHe": "נואקשוט",
+    "continent": "Africa"
+  },
+  {
+    "code": "mu",
+    "country": "Mauritius",
+    "countryHe": "מאוריציוס",
+    "capital": "Port Louis",
+    "capitalHe": "פורט לואי",
+    "continent": "Africa"
+  },
+  {
+    "code": "mx",
+    "country": "Mexico",
+    "countryHe": "מקסיקו",
+    "capital": "Mexico City",
+    "capitalHe": "מקסיקו סיטי",
+    "continent": "North America"
+  },
+  {
+    "code": "fm",
+    "country": "Micronesia",
+    "countryHe": "מיקרונזיה",
+    "capital": "Palikir",
+    "capitalHe": "פאליקיר",
+    "continent": "Oceania"
+  },
+  {
+    "code": "md",
+    "country": "Moldova",
+    "countryHe": "מולדובה",
+    "capital": "Chisinau",
+    "capitalHe": "קישינב",
+    "continent": "Europe"
+  },
+  {
+    "code": "mc",
+    "country": "Monaco",
+    "countryHe": "מונקו",
+    "capital": "Monaco",
+    "capitalHe": "מונקו",
+    "continent": "Europe"
+  },
+  {
+    "code": "mn",
+    "country": "Mongolia",
+    "countryHe": "מונגוליה",
+    "capital": "Ulaanbaatar",
+    "capitalHe": "אולן בטור",
+    "continent": "Asia"
+  },
+  {
+    "code": "me",
+    "country": "Montenegro",
+    "countryHe": "מונטנגרו",
+    "capital": "Podgorica",
+    "capitalHe": "פודגוריצה",
+    "continent": "Europe"
+  },
+  {
+    "code": "ma",
+    "country": "Morocco",
+    "countryHe": "מרוקו",
+    "capital": "Rabat",
+    "capitalHe": "רבאט",
+    "continent": "Africa"
+  },
+  {
+    "code": "mz",
+    "country": "Mozambique",
+    "countryHe": "מוזמביק",
+    "capital": "Maputo",
+    "capitalHe": "מפוטו",
+    "continent": "Africa"
+  },
+  {
+    "code": "mm",
+    "country": "Myanmar",
+    "countryHe": "מיאנמר",
+    "capital": "Naypyidaw",
+    "capitalHe": "נאיפידאו",
+    "continent": "Asia"
+  },
+  {
+    "code": "na",
+    "country": "Namibia",
+    "countryHe": "נמיביה",
+    "capital": "Windhoek",
+    "capitalHe": "וינדהוק",
+    "continent": "Africa"
+  },
+  {
+    "code": "nr",
+    "country": "Nauru",
+    "countryHe": "נאורו",
+    "capital": "Yaren",
+    "capitalHe": "ירן",
+    "continent": "Oceania"
+  },
+  {
+    "code": "np",
+    "country": "Nepal",
+    "countryHe": "נפאל",
+    "capital": "Kathmandu",
+    "capitalHe": "קטמנדו",
+    "continent": "Asia"
+  },
+  {
+    "code": "nl",
+    "country": "Netherlands",
+    "countryHe": "הולנד",
+    "capital": "Amsterdam",
+    "capitalHe": "אמסטרדם",
+    "continent": "Europe"
+  },
+  {
+    "code": "nz",
+    "country": "New Zealand",
+    "countryHe": "ניו זילנד",
+    "capital": "Wellington",
+    "capitalHe": "וולינגטון",
+    "continent": "Oceania"
+  },
+  {
+    "code": "ni",
+    "country": "Nicaragua",
+    "countryHe": "ניקרגואה",
+    "capital": "Managua",
+    "capitalHe": "מנגואה",
+    "continent": "North America"
+  },
+  {
+    "code": "ne",
+    "country": "Niger",
+    "countryHe": "ניז'ר",
+    "capital": "Niamey",
+    "capitalHe": "ניאמי",
+    "continent": "Africa"
+  },
+  {
+    "code": "ng",
+    "country": "Nigeria",
+    "countryHe": "ניגריה",
+    "capital": "Abuja",
+    "capitalHe": "אבוג'ה",
+    "continent": "Africa"
+  },
+  {
+    "code": "kp",
+    "country": "North Korea",
+    "countryHe": "קוריאה הצפונית",
+    "capital": "Pyongyang",
+    "capitalHe": "פיונגיאנג",
+    "continent": "Asia"
+  },
+  {
+    "code": "mk",
+    "country": "North Macedonia",
+    "countryHe": "מקדוניה הצפונית",
+    "capital": "Skopje",
+    "capitalHe": "סקופיה",
+    "continent": "Europe"
+  },
+  {
+    "code": "no",
+    "country": "Norway",
+    "countryHe": "נורווגיה",
+    "capital": "Oslo",
+    "capitalHe": "אוסלו",
+    "continent": "Europe"
+  },
+  {
+    "code": "om",
+    "country": "Oman",
+    "countryHe": "עומאן",
+    "capital": "Muscat",
+    "capitalHe": "מוסקט",
+    "continent": "Asia"
+  },
+  {
+    "code": "pk",
+    "country": "Pakistan",
+    "countryHe": "פקיסטן",
+    "capital": "Islamabad",
+    "capitalHe": "איסלמאבאד",
+    "continent": "Asia"
+  },
+  {
+    "code": "pw",
+    "country": "Palau",
+    "countryHe": "פלאו",
+    "capital": "Ngerulmud",
+    "capitalHe": "נגרולמוד",
+    "continent": "Oceania"
+  },
+  {
+    "code": "pa",
+    "country": "Panama",
+    "countryHe": "פנמה",
+    "capital": "Panama City",
+    "capitalHe": "פנמה סיטי",
+    "continent": "North America"
+  },
+  {
+    "code": "pg",
+    "country": "Papua New Guinea",
+    "countryHe": "פפואה גינאה החדשה",
+    "capital": "Port Moresby",
+    "capitalHe": "פורט מורסבי",
+    "continent": "Oceania"
+  },
+  {
+    "code": "py",
+    "country": "Paraguay",
+    "countryHe": "פרגוואי",
+    "capital": "Asuncion",
+    "capitalHe": "אסונסיון",
+    "continent": "South America"
+  },
+  {
+    "code": "pe",
+    "country": "Peru",
+    "countryHe": "פרו",
+    "capital": "Lima",
+    "capitalHe": "לימה",
+    "continent": "South America"
+  },
+  {
+    "code": "ph",
+    "country": "Philippines",
+    "countryHe": "הפיליפינים",
+    "capital": "Manila",
+    "capitalHe": "מנילה",
+    "continent": "Asia"
+  },
+  {
+    "code": "pl",
+    "country": "Poland",
+    "countryHe": "פולין",
+    "capital": "Warsaw",
+    "capitalHe": "ורשה",
+    "continent": "Europe"
+  },
+  {
+    "code": "pt",
+    "country": "Portugal",
+    "countryHe": "פורטוגל",
+    "capital": "Lisbon",
+    "capitalHe": "ליסבון",
+    "continent": "Europe"
+  },
+  {
+    "code": "qa",
+    "country": "Qatar",
+    "countryHe": "קטר",
+    "capital": "Doha",
+    "capitalHe": "דוחה",
+    "continent": "Asia"
+  },
+  {
+    "code": "cg",
+    "country": "Republic of the Congo",
+    "countryHe": "הרפובליקה של קונגו",
+    "capital": "Brazzaville",
+    "capitalHe": "ברזוויל",
+    "continent": "Africa"
+  },
+  {
+    "code": "ro",
+    "country": "Romania",
+    "countryHe": "רומניה",
+    "capital": "Bucharest",
+    "capitalHe": "בוקרשט",
+    "continent": "Europe"
+  },
+  {
+    "code": "ru",
+    "country": "Russia",
+    "countryHe": "רוסיה",
+    "capital": "Moscow",
+    "capitalHe": "מוסקבה",
+    "continent": "Europe"
+  },
+  {
+    "code": "rw",
+    "country": "Rwanda",
+    "countryHe": "רואנדה",
+    "capital": "Kigali",
+    "capitalHe": "קיגלי",
+    "continent": "Africa"
+  },
+  {
+    "code": "kn",
+    "country": "Saint Kitts and Nevis",
+    "countryHe": "סנט קיטס ונוויס",
+    "capital": "Basseterre",
+    "capitalHe": "בסטר",
+    "continent": "North America"
+  },
+  {
+    "code": "lc",
+    "country": "Saint Lucia",
+    "countryHe": "סנט לוסיה",
+    "capital": "Castries",
+    "capitalHe": "קסטריס",
+    "continent": "North America"
+  },
+  {
+    "code": "vc",
+    "country": "Saint Vincent and the Grenadines",
+    "countryHe": "סנט וינסנט",
+    "capital": "Kingstown",
+    "capitalHe": "קינגסטאון",
+    "continent": "North America"
+  },
+  {
+    "code": "ws",
+    "country": "Samoa",
+    "countryHe": "סמואה",
+    "capital": "Apia",
+    "capitalHe": "אפיה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "sm",
+    "country": "San Marino",
+    "countryHe": "סן מרינו",
+    "capital": "San Marino",
+    "capitalHe": "סן מרינו",
+    "continent": "Europe"
+  },
+  {
+    "code": "sa",
+    "country": "Saudi Arabia",
+    "countryHe": "ערב הסעודית",
+    "capital": "Riyadh",
+    "capitalHe": "ריאד",
+    "continent": "Asia"
+  },
+  {
+    "code": "sn",
+    "country": "Senegal",
+    "countryHe": "סנגל",
+    "capital": "Dakar",
+    "capitalHe": "דקאר",
+    "continent": "Africa"
+  },
+  {
+    "code": "rs",
+    "country": "Serbia",
+    "countryHe": "סרביה",
+    "capital": "Belgrade",
+    "capitalHe": "בלגרד",
+    "continent": "Europe"
+  },
+  {
+    "code": "sc",
+    "country": "Seychelles",
+    "countryHe": "איי סיישל",
+    "capital": "Victoria",
+    "capitalHe": "ויקטוריה",
+    "continent": "Africa"
+  },
+  {
+    "code": "sl",
+    "country": "Sierra Leone",
+    "countryHe": "סיירה לאון",
+    "capital": "Freetown",
+    "capitalHe": "פריטאון",
+    "continent": "Africa"
+  },
+  {
+    "code": "sg",
+    "country": "Singapore",
+    "countryHe": "סינגפור",
+    "capital": "Singapore",
+    "capitalHe": "סינגפור",
+    "continent": "Asia"
+  },
+  {
+    "code": "sk",
+    "country": "Slovakia",
+    "countryHe": "סלובקיה",
+    "capital": "Bratislava",
+    "capitalHe": "ברטיסלבה",
+    "continent": "Europe"
+  },
+  {
+    "code": "si",
+    "country": "Slovenia",
+    "countryHe": "סלובניה",
+    "capital": "Ljubljana",
+    "capitalHe": "ליובליאנה",
+    "continent": "Europe"
+  },
+  {
+    "code": "sb",
+    "country": "Solomon Islands",
+    "countryHe": "איי שלמה",
+    "capital": "Honiara",
+    "capitalHe": "הוניארה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "so",
+    "country": "Somalia",
+    "countryHe": "סומליה",
+    "capital": "Mogadishu",
+    "capitalHe": "מוגדישו",
+    "continent": "Africa"
+  },
+  {
+    "code": "za",
+    "country": "South Africa",
+    "countryHe": "דרום אפריקה",
+    "capital": "Pretoria",
+    "capitalHe": "פרטוריה",
+    "continent": "Africa"
+  },
+  {
+    "code": "kr",
+    "country": "South Korea",
+    "countryHe": "קוריאה הדרומית",
+    "capital": "Seoul",
+    "capitalHe": "סיאול",
+    "continent": "Asia"
+  },
+  {
+    "code": "ss",
+    "country": "South Sudan",
+    "countryHe": "דרום סודן",
+    "capital": "Juba",
+    "capitalHe": "ג'ובה",
+    "continent": "Africa"
+  },
+  {
+    "code": "es",
+    "country": "Spain",
+    "countryHe": "ספרד",
+    "capital": "Madrid",
+    "capitalHe": "מדריד",
+    "continent": "Europe"
+  },
+  {
+    "code": "lk",
+    "country": "Sri Lanka",
+    "countryHe": "סרי לנקה",
+    "capital": "Sri Jayawardenepura Kotte",
+    "capitalHe": "שרי ג'יאוורדנפורה קוטה",
+    "continent": "Asia"
+  },
+  {
+    "code": "sd",
+    "country": "Sudan",
+    "countryHe": "סודן",
+    "capital": "Khartoum",
+    "capitalHe": "חרטום",
+    "continent": "Africa"
+  },
+  {
+    "code": "sr",
+    "country": "Suriname",
+    "countryHe": "סורינאם",
+    "capital": "Paramaribo",
+    "capitalHe": "פרמריבו",
+    "continent": "South America"
+  },
+  {
+    "code": "se",
+    "country": "Sweden",
+    "countryHe": "שוודיה",
+    "capital": "Stockholm",
+    "capitalHe": "שטוקהולם",
+    "continent": "Europe"
+  },
+  {
+    "code": "ch",
+    "country": "Switzerland",
+    "countryHe": "שוויץ",
+    "capital": "Bern",
+    "capitalHe": "ברן",
+    "continent": "Europe"
+  },
+  {
+    "code": "sy",
+    "country": "Syria",
+    "countryHe": "סוריה",
+    "capital": "Damascus",
+    "capitalHe": "דמשק",
+    "continent": "Asia"
+  },
+  {
+    "code": "st",
+    "country": "São Tomé and Príncipe",
+    "countryHe": "סאו טומה ופרינסיפה",
+    "capital": "Sao Tome",
+    "capitalHe": "סאו טומה",
+    "continent": "Africa"
+  },
+  {
+    "code": "tw",
+    "country": "Taiwan",
+    "countryHe": "טייוואן",
+    "capital": "Taipei",
+    "capitalHe": "טאיפיי",
+    "continent": "Asia"
+  },
+  {
+    "code": "tj",
+    "country": "Tajikistan",
+    "countryHe": "טג'יקיסטן",
+    "capital": "Dushanbe",
+    "capitalHe": "דושנבה",
+    "continent": "Asia"
+  },
+  {
+    "code": "tz",
+    "country": "Tanzania",
+    "countryHe": "טנזניה",
+    "capital": "Dodoma",
+    "capitalHe": "דודומה",
+    "continent": "Africa"
+  },
+  {
+    "code": "th",
+    "country": "Thailand",
+    "countryHe": "תאילנד",
+    "capital": "Bangkok",
+    "capitalHe": "בנגקוק",
+    "continent": "Asia"
+  },
+  {
+    "code": "tl",
+    "country": "Timor-Leste",
+    "countryHe": "טימור-לסטה",
+    "capital": "Dili",
+    "capitalHe": "דילי",
+    "continent": "Asia"
+  },
+  {
+    "code": "tg",
+    "country": "Togo",
+    "countryHe": "טוגו",
+    "capital": "Lome",
+    "capitalHe": "לומה",
+    "continent": "Africa"
+  },
+  {
+    "code": "to",
+    "country": "Tonga",
+    "countryHe": "טונגה",
+    "capital": "Nuku'alofa",
+    "capitalHe": "נוקואלופה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "tt",
+    "country": "Trinidad and Tobago",
+    "countryHe": "טרינידד וטובגו",
+    "capital": "Port of Spain",
+    "capitalHe": "פורט אוף ספיין",
+    "continent": "North America"
+  },
+  {
+    "code": "tn",
+    "country": "Tunisia",
+    "countryHe": "תוניסיה",
+    "capital": "Tunis",
+    "capitalHe": "תוניס",
+    "continent": "Africa"
+  },
+  {
+    "code": "tr",
+    "country": "Turkey",
+    "countryHe": "טורקיה",
+    "capital": "Ankara",
+    "capitalHe": "אנקרה",
+    "continent": "Asia"
+  },
+  {
+    "code": "tm",
+    "country": "Turkmenistan",
+    "countryHe": "טורקמניסטן",
+    "capital": "Ashgabat",
+    "capitalHe": "אשגבת",
+    "continent": "Asia"
+  },
+  {
+    "code": "tv",
+    "country": "Tuvalu",
+    "countryHe": "טובאלו",
+    "capital": "Funafuti",
+    "capitalHe": "פונפוטי",
+    "continent": "Oceania"
+  },
+  {
+    "code": "ug",
+    "country": "Uganda",
+    "countryHe": "אוגנדה",
+    "capital": "Kampala",
+    "capitalHe": "קמפלה",
+    "continent": "Africa"
+  },
+  {
+    "code": "ua",
+    "country": "Ukraine",
+    "countryHe": "אוקראינה",
+    "capital": "Kyiv",
+    "capitalHe": "קייב",
+    "continent": "Europe"
+  },
+  {
+    "code": "ae",
+    "country": "United Arab Emirates",
+    "countryHe": "איחוד האמירויות",
+    "capital": "Abu Dhabi",
+    "capitalHe": "אבו דאבי",
+    "continent": "Asia"
+  },
+  {
+    "code": "gb",
+    "country": "United Kingdom",
+    "countryHe": "הממלכה המאוחדת",
+    "capital": "London",
+    "capitalHe": "לונדון",
+    "continent": "Europe"
+  },
+  {
+    "code": "us",
+    "country": "United States",
+    "countryHe": "ארצות הברית",
+    "capital": "Washington D.C.",
+    "capitalHe": "וושינגטון די.סי.",
+    "continent": "North America"
+  },
+  {
+    "code": "uy",
+    "country": "Uruguay",
+    "countryHe": "אורוגוואי",
+    "capital": "Montevideo",
+    "capitalHe": "מונטווידאו",
+    "continent": "South America"
+  },
+  {
+    "code": "uz",
+    "country": "Uzbekistan",
+    "countryHe": "אוזבקיסטן",
+    "capital": "Tashkent",
+    "capitalHe": "טשקנט",
+    "continent": "Asia"
+  },
+  {
+    "code": "vu",
+    "country": "Vanuatu",
+    "countryHe": "ונואטו",
+    "capital": "Port Vila",
+    "capitalHe": "פורט וילה",
+    "continent": "Oceania"
+  },
+  {
+    "code": "va",
+    "country": "Vatican City",
+    "countryHe": "הוותיקן",
+    "capital": "Vatican City",
+    "capitalHe": "הוותיקן",
+    "continent": "Europe"
+  },
+  {
+    "code": "ve",
+    "country": "Venezuela",
+    "countryHe": "ונצואלה",
+    "capital": "Caracas",
+    "capitalHe": "קראקס",
+    "continent": "South America"
+  },
+  {
+    "code": "vn",
+    "country": "Vietnam",
+    "countryHe": "וייטנאם",
+    "capital": "Hanoi",
+    "capitalHe": "האנוי",
+    "continent": "Asia"
+  },
+  {
+    "code": "ye",
+    "country": "Yemen",
+    "countryHe": "תימן",
+    "capital": "Sana'a",
+    "capitalHe": "סנעא",
+    "continent": "Asia"
+  },
+  {
+    "code": "zm",
+    "country": "Zambia",
+    "countryHe": "זמביה",
+    "capital": "Lusaka",
+    "capitalHe": "לוסקה",
+    "continent": "Africa"
+  },
+  {
+    "code": "zw",
+    "country": "Zimbabwe",
+    "countryHe": "זימבבואה",
+    "capital": "Harare",
+    "capitalHe": "הרארה",
+    "continent": "Africa"
+  }
+]

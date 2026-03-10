@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flag Flow Arena — Dashboard</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/dashboard.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-brand">
+    <h1 id="appTitle">Flag Flow Arena</h1>
+    <span class="build-tag" id="buildTag">v3.0.0</span>
+  </div>
+  <div class="topbar-right">
+    <button class="btn-ghost" id="langBtn" style="min-width:6rem;">עברית</button>
+  </div>
+</header>
+
+<div class="dashboard-wrap">
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 id="heroTitle">Flag Flow Arena</h1>
+    <p class="subtitle" id="heroSubtitle">Test your world knowledge — flags, countries &amp; capitals!</p>
+    <p class="how-to" id="heroHow">Pick a player, choose a mode, then enter the arena.</p>
+  </section>
+
+  <div class="dash-grid">
+
+    <!-- LEFT COLUMN: Players + Game setup -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+      <!-- Players -->
+      <div class="card">
+        <div class="players-header">
+          <h2 id="playersSectionTitle">Players</h2>
+          <span class="eyebrow" id="playerCount">0 / 10</span>
+        </div>
+        <div class="add-player-row">
+          <input type="text" id="newPlayerName" maxlength="24" />
+          <button class="btn-primary" id="addPlayerBtn" style="white-space:nowrap;padding:0.55rem 1rem;">+</button>
+        </div>
+        <!-- Icon picker (shown when adding/editing) -->
+        <div id="iconPickerWrap" class="hidden">
+          <div class="muted" id="iconPickerLabel" style="margin-bottom:0.35rem;">Pick an icon</div>
+          <div class="icon-picker" id="iconPicker"></div>
+        </div>
+        <div id="playerFeedback" class="feedback neutral" style="margin-bottom:0.5rem;min-height:0;padding:0.3rem 0.6rem;"></div>
+        <div class="player-list" id="playerList"></div>
+      </div>
+
+      <!-- Mode -->
+      <div class="card">
+        <h2 id="modeSectionTitle" style="margin-bottom:0.75rem;">Mode</h2>
+        <div class="mode-grid" id="modeGrid">
+          <button class="mode-btn" data-mode="chill" id="modeChill">
+            <div class="mode-btn-title">Chill</div>
+            <div class="mode-btn-desc">Relaxed play, no timer, no lives. Learn and explore.</div>
+          </button>
+          <button class="mode-btn" data-mode="bruce" id="modeBruce">
+            <div class="mode-btn-title">Bruce Lee</div>
+            <div class="mode-btn-desc">Fast, 3 lives, 8-second timer. How long can you survive?</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Game Type -->
+      <div class="card">
+        <h2 id="gametypeSectionTitle" style="margin-bottom:0.75rem;">Game Type</h2>
+        <div class="gametype-list" id="gametypeList">
+          <button class="gametype-btn" data-type="flag-country" id="typeFlag">
+            <div class="gametype-title">Flags → Country</div>
+            <div class="gametype-desc">See a flag, pick the country.</div>
+          </button>
+          <button class="gametype-btn" data-type="country-capital" id="typeCapital">
+            <div class="gametype-title">Country → Capital</div>
+            <div class="gametype-desc">See a country, pick its capital.</div>
+          </button>
+          <button class="gametype-btn" data-type="continent-capital" id="typeContinent">
+            <div class="gametype-title">Continent Explorer</div>
+            <div class="gametype-desc">Pick a continent, guess capitals. Chill only.</div>
+            <div class="gametype-locked hidden" id="continentLocked">Not available in Bruce Lee mode.</div>
+          </button>
+        </div>
+      </div>
+
+      <!-- Enter Arena -->
+      <div class="enter-arena-section">
+        <button class="btn-primary" id="enterBtn" disabled>Enter Arena</button>
+        <div class="enter-hint" id="enterHint">Select a player first.</div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN: Leaderboard + Medals -->
+    <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+      <!-- Leaderboard -->
+      <div class="card">
+        <h2 id="leaderboardTitle" style="margin-bottom:0.25rem;">Leaderboard</h2>
+        <div class="leaderboard-table" id="leaderboard">
+          <div class="muted" id="leaderboardEmpty">No games played yet.</div>
+        </div>
+      </div>
+
+      <!-- Medal Gallery -->
+      <div class="card">
+        <h2 id="medalsTitle" style="margin-bottom:0.75rem;">Medal Gallery</h2>
+        <div class="medal-gallery" id="medalGallery"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="scripts/utils.js"></script>
+<script src="scripts/i18n.js"></script>
+<script src="scripts/storage.js"></script>
+<script src="scripts/achievements.js"></script>
+<script src="scripts/dashboard.js"></script>
+</body>
+</html>
