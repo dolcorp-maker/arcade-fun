@@ -395,7 +395,8 @@
       emoji: "🚀",
       tag: "LANGUAGE",
       difficulty: "easy",
-      folder: "English_game",
+      folder: "English_game_v2",
+      file: "index_final.html",
       plays: "0"
     },
     {
@@ -449,7 +450,7 @@
       const diffClass = `diff-${game.difficulty}`;
       const card = document.createElement('a');
       card.className = 'game-card';
-      card.href = `games/${game.folder}/index.html`;
+      card.href = `games/${game.folder}/${game.file || 'index.html'}`;
       card.addEventListener('click', (e) => {
         e.preventDefault();
         incrementPlays(game.id);

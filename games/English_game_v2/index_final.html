@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>English Galaxy Deluxe - Final UI</title>
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Secular+One&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-a:#fff9ec;
+  --bg-b:#e9f9ff;
+  --bg-c:#f4efff;
+  --ink:#17324d;
+  --ink-soft:#5a6f86;
+  --line:#d2e5f3;
+  --panel:#ffffffd9;
+  --accent:#ff8a3d;
+  --accent-2:#28b7c7;
+  --accent-3:#ffd84d;
+  --ok:#16b883;
+  --bad:#e94a63;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Assistant',sans-serif;
+  color:var(--ink);
+  min-height:100vh;
+  background:
+    radial-gradient(1200px 420px at -10% -10%, #ffd9b5 0%, transparent 65%),
+    radial-gradient(1200px 460px at 120% -10%, #b7ecff 0%, transparent 60%),
+    linear-gradient(140deg,var(--bg-a),var(--bg-b) 55%,var(--bg-c));
+}
+body::before,
+body::after{
+  content:"";
+  position:fixed;
+  width:360px;
+  height:360px;
+  border-radius:50%;
+  z-index:-1;
+  opacity:.35;
+  filter:blur(14px);
+}
+body::before{left:-120px;top:24vh;background:#ffc18f;animation:floatOrb 14s ease-in-out infinite}
+body::after{right:-120px;top:6vh;background:#96e7ff;animation:floatOrb 17s ease-in-out infinite reverse}
+@keyframes floatOrb{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
+
+button,input,select{font:inherit}
+.hidden{display:none!important}
+.screen{max-width:1220px;margin:0 auto;padding:16px}
+
+.panel{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:24px;
+  padding:16px;
+  box-shadow:0 14px 38px rgba(17,56,89,.09);
+  backdrop-filter:blur(6px);
+  animation:liftIn .45s ease both;
+}
+@keyframes liftIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.panel h2{
+  margin:0 0 10px;
+  font-size:1.06rem;
+  letter-spacing:.02em;
+  color:#114668;
+}
+.hero{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:14px;
+  align-items:center;
+  padding:18px;
+  margin-bottom:14px;
+  text-align:right;
+  background:linear-gradient(130deg,#fff8eb 0%,#ecfbff 60%,#f3edff 100%);
+}
+.hero-copy{display:grid;gap:8px}
+.logo{
+  font-family:'Secular One',sans-serif;
+  font-size:clamp(2rem,6vw,3.6rem);
+  line-height:1;
+  letter-spacing:.02em;
+  color:#0f4568;
+  text-shadow:0 2px 0 #fff;
+}
+.subtitle{margin-top:8px;font-weight:700;font-size:1.06rem;color:#225270}
+.small{margin-top:8px;color:var(--ink-soft);line-height:1.6}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.hero-badge{
+  background:#f3fbff;
+  border:1px solid #cce8f9;
+  color:#1d4f70;
+  border-radius:999px;
+  padding:6px 10px;
+  font-size:.9rem;
+  font-weight:700;
+}
+.hero-cards{display:grid;gap:8px}
+.hero-card{
+  background:linear-gradient(130deg,#f8fdff,#eef9ff);
+  border:1px solid #cfe8f8;
+  border-radius:14px;
+  padding:10px 12px;
+}
+.hero-card strong{display:block;color:#114a6f}
+.hero-card span{display:block;color:#5b768c;font-size:.9rem;margin-top:3px}
+
+.home-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:14px;
+}
+.stack{display:grid;gap:14px}
+
+.btn-row,.pet-row,.reward-row,.level-row,.action-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.big-btn,.tiny-btn,.pet,.reward,.level,.action,.choice,.memory-card,.album-item,.top-pill{
+  border:none;
+  border-radius:18px;
+  transition:.2s transform,.2s box-shadow,.2s opacity;
+}
+.big-btn:hover,.tiny-btn:hover,.pet:hover,.reward:hover,.level:hover,.action:hover,.choice:hover{transform:translateY(-2px)}
+.big-btn:focus-visible,.tiny-btn:focus-visible,.action:focus-visible,.choice:focus-visible,.pet:focus-visible,.level:focus-visible{
+  outline:3px solid #0e4f73;
+  outline-offset:2px;
+}
+
+.big-btn{
+  cursor:pointer;
+  min-height:54px;
+  padding:14px 20px;
+  font-weight:800;
+  font-size:1.02rem;
+  color:#fff;
+  background:linear-gradient(130deg,var(--accent-2),#4ad7f3);
+  box-shadow:0 10px 20px rgba(40,183,199,.3);
+}
+.big-btn.gold{background:linear-gradient(130deg,var(--accent-3),#ffb54c);color:#402c0f;box-shadow:0 10px 20px rgba(255,180,76,.28)}
+.tiny-btn{cursor:pointer;min-height:42px;padding:10px 14px;font-weight:700;background:#edf7ff;color:#1b4d72;border:1px solid #c7e6fb}
+
+.level,.pet,.reward{
+  cursor:pointer;
+  min-width:112px;
+  padding:10px 12px;
+  text-align:center;
+  background:#f3fbff;
+  color:#1f4c6a;
+  border:1px solid #cae7f9;
+}
+.pet.active,.level.active{background:linear-gradient(130deg,#ffe481,#ffbd57);border-color:#ffc769;color:#47300a}
+.reward.locked{opacity:.42;filter:grayscale(.3)}
+
+.album-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(94px,1fr));gap:8px}
+.album-item{background:#eff8ff;padding:11px;text-align:center;color:#1b4c6d;border:1px solid #d5ebfb}
+.album-item.locked{opacity:.38;filter:grayscale(1)}
+.album-item .icon{font-size:1.9rem}
+.album-item .name{font-size:.8rem;margin-top:3px;font-weight:700}
+
+.summary-box{display:flex;flex-wrap:wrap;gap:8px}
+.summary-pill{background:#f2fbff;border:1px solid #cde9f9;color:#1c4d6e;border-radius:999px;padding:7px 10px;font-weight:700}
+.settings-wrap{display:grid;grid-template-columns:280px 1fr;gap:12px}
+.settings-left,.settings-right{border:1px solid #d5e9f8;background:#f9fdff;border-radius:16px;padding:12px}
+.word-list{max-height:380px;overflow:auto;display:grid;gap:8px;padding-inline-end:4px}
+.word-item{display:grid;grid-template-columns:auto 1fr auto;gap:9px;align-items:center;padding:8px 10px;border-radius:14px;background:#eff8ff;border:1px solid #d7ebfa;color:#1b4e70}
+.word-item .icon{font-size:1.7rem}
+.word-item .meta .en{font-weight:800}
+.word-item .meta .he{font-size:.84rem;color:#59768e}
+.switch{appearance:none;width:44px;height:24px;border-radius:999px;background:#90a9bc;position:relative;cursor:pointer;transition:.2s}
+.switch::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;top:4px;right:4px;transition:.2s}
+.switch:checked{background:#24b28f}
+.switch:checked::after{right:24px}
+
+.topbar{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:10px}
+.top-pill{padding:7px 11px;background:#f1faff;border:1px solid #cfe8f7;color:#1d4f70;font-weight:800}
+.top-pill strong{font-family:'Secular One',sans-serif;font-size:1.1rem;margin-inline-start:6px}
+
+.progress-wrap{height:14px;background:#e7f5ff;border:1px solid #cae5f8;border-radius:999px;overflow:hidden;margin:10px 0}
+.progress{height:100%;width:0;background:linear-gradient(90deg,#17b48d,#28b7c7,#ffc34f);transition:width .25s ease}
+.challenge-wrap{display:none}
+.challenge-wrap.show{display:block}
+.challenge-progress{background:linear-gradient(90deg,#ffb64d,#ff7e4d,#e94a63);transition:width .08s linear}
+
+.layout{display:grid;grid-template-columns:330px 1fr;gap:14px;align-items:start}
+.left-card,.right-card{background:#f9fdff;border:1px solid #d4e9f8;border-radius:22px;padding:14px;box-shadow:0 10px 20px rgba(24,65,98,.07)}
+.mascot{font-size:5.8rem;text-align:center;animation:bob 2.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.speech{margin-top:8px;background:#eef8ff;border:1px solid #cfe7f8;border-radius:16px;padding:11px;text-align:center}
+.speech .title{font-weight:800;color:#0f4b6f}
+.speech .line{margin-top:5px;color:#4f6f88}
+.emoji-big{font-size:4.9rem;text-align:center;line-height:1;margin:10px 0;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.question{text-align:center;font-size:1.1rem;font-weight:800;color:#0e4e73;margin-bottom:10px}
+.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.choice{cursor:pointer;background:#fff;border:1px solid #d1e8f8;color:#214d6a;padding:12px;min-height:138px;box-shadow:0 8px 18px rgba(17,52,81,.08)}
+.choice .e{text-align:center;font-size:4.25rem;line-height:1}
+.choice .h{text-align:center;margin-top:10px;font-weight:800;color:#5a7188;font-size:1.08rem}
+.choice.correct{outline:5px solid var(--ok)}
+.choice.wrong{outline:5px solid var(--bad);animation:shake .33s ease}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.action-row{margin-top:12px;justify-content:flex-start;gap:12px}
+.right-card .action-row{position:sticky;bottom:0;background:linear-gradient(180deg,rgba(249,253,255,0),#f9fdff 24%);padding-top:10px}
+.action{cursor:pointer;min-height:52px;padding:12px 16px;font-weight:800;font-size:1rem;color:#124766;background:linear-gradient(130deg,#b6f5e4,#86e9d0)}
+.action.alt{background:linear-gradient(130deg,#b6eaff,#7dd7f7);color:#0d4767}
+.action.warn{background:linear-gradient(130deg,#ffe598,#ffc566);color:#4c3608}
+.letters-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+.letter-main{
+  background:linear-gradient(150deg,#fffdf3,#effbff 58%,#f5efff);
+  border:1px solid #d4e9f8;
+  border-radius:22px;
+  padding:16px;
+  text-align:center;
+}
+.letter-char{
+  font-family:'Secular One',sans-serif;
+  font-size:clamp(4rem,14vw,9rem);
+  line-height:1;
+  color:#0f4b6f;
+  text-shadow:0 6px 0 rgba(255,255,255,.85);
+}
+.letter-hint{margin-top:8px;color:#5a768d;font-weight:700}
+.reveal-box{
+  margin-top:12px;
+  border-radius:16px;
+  padding:12px;
+  background:#f4fbff;
+  border:1px solid #d2e8f8;
+  opacity:0;
+  transform:translateY(6px);
+  transition:.2s ease;
+}
+.reveal-box.show{opacity:1;transform:translateY(0)}
+.reveal-word-emoji{font-size:2.2rem;line-height:1}
+.reveal-word-en{font-family:'Secular One',sans-serif;font-size:1.8rem;color:#0f4b6f}
+.reveal-word-en.shadow{
+  display:inline-block;
+  letter-spacing:.24em;
+  font-size:clamp(1.9rem,7.2vw,3.6rem);
+  line-height:1.1;
+  background:linear-gradient(120deg,#19c6e3,#2b9dff,#8f7dff,#ff7bc1,#ffb24f,#19c6e3);
+  background-size:240% 240%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  filter:drop-shadow(0 5px 10px rgba(64,130,178,.24));
+  animation:magicShift 7s linear infinite, magicPulse 2.1s ease-in-out infinite;
+}
+.reveal-word-he{margin-top:4px;color:#5d768c;font-weight:700}
+.letter-progress{
+  margin-top:8px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:#f2fbff;
+  border:1px solid #cce7f9;
+  border-radius:999px;
+  padding:6px 10px;
+  color:#1b4f70;
+  font-weight:800;
+}
+.letter-board{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(72px,1fr));
+  gap:9px;
+}
+.letter-tile{
+  border:none;
+  padding:0;
+  background:transparent;
+  cursor:pointer;
+  perspective:1000px;
+  aspect-ratio:1/1;
+}
+.letter-tile-inner{
+  position:relative;
+  width:100%;
+  height:100%;
+  transform-style:preserve-3d;
+  transition:transform .65s ease;
+}
+.letter-tile.flipped .letter-tile-inner{transform:rotateY(180deg)}
+.letter-tile.active .letter-face.front{box-shadow:0 0 0 3px #0e4f73 inset}
+.letter-face{
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  border:1px solid #cfe6f8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  backface-visibility:hidden;
+  box-shadow:0 8px 14px rgba(16,63,98,.08);
+}
+.letter-face.front{
+  background:linear-gradient(135deg,#ffffff,#eef9ff);
+  color:#145071;
+  font-family:'Secular One',sans-serif;
+  font-size:2rem;
+}
+.letter-face.back{
+  background:linear-gradient(145deg,#e8fbff,#f4ecff);
+  transform:rotateY(180deg);
+  color:#165174;
+  padding:4px;
+}
+.tile-emoji{font-size:1.35rem;line-height:1}
+.tile-word{font-size:.78rem;font-weight:800;margin-top:3px}
+.tile-he{font-size:.68rem;color:#5b7690;margin-top:1px}
+@keyframes magicShift{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+@keyframes magicPulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.045)}
+}
+
+.memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+.memory-card{cursor:pointer;height:110px;background:#fff;border:1px solid #d1e8f8;color:#1d4e70;display:flex;align-items:center;justify-content:center;flex-direction:column;font-weight:800;box-shadow:0 8px 16px rgba(19,57,88,.08)}
+.memory-card.face-down{background:linear-gradient(130deg,#2cbad8,#1b8fa7);color:#fff;border:none;font-size:2rem}
+.memory-card.matched{background:linear-gradient(130deg,#fff5d4,#ffecb9);border-color:#ffd583}
+.memory-card .word{margin-top:5px;text-align:center;padding-inline:6px}
+.memory-card .emoji{font-size:2.3rem}
+
+.overlay{position:fixed;inset:0;background:rgba(14,41,66,.4);display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:.2s ease;z-index:90}
+.overlay.show{opacity:1;pointer-events:all}
+.modal{width:min(92vw,520px);background:#fff;border-radius:22px;padding:22px;text-align:center;color:#1b4869;box-shadow:0 20px 45px rgba(12,38,61,.28)}
+.modal .big{font-size:4rem;line-height:1}
+.modal h3{font-family:'Secular One',sans-serif;font-size:1.9rem;margin:8px 0 4px}
+.modal p{font-weight:700;color:#587089;line-height:1.6}
+
+.particles,.confetti,.floaters{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:80}
+.particle{position:absolute;border-radius:50%;animation:burst .8s ease forwards}
+@keyframes burst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--x),var(--y)) scale(.2)}}
+.conf{position:absolute;width:10px;height:16px;border-radius:4px;animation:fall var(--d) linear forwards}
+@keyframes fall{from{opacity:1;transform:translateY(-20px) rotate(0deg)}to{opacity:0;transform:translateY(110vh) translateX(var(--x)) rotate(440deg)}}
+.floater{position:absolute;font-family:'Secular One',sans-serif;animation:floatUp 1.5s ease forwards}
+@keyframes floatUp{0%{opacity:0;transform:translateY(12px) scale(.7)}20%{opacity:1}100%{opacity:0;transform:translateY(-80px) scale(1.2)}}
+
+@media (max-width:980px){
+  .hero,.home-grid,.layout,.settings-wrap{grid-template-columns:1fr}
+  .hero{text-align:center}
+  .hero-badges{justify-content:center}
+}
+@media (max-width:700px){
+  .topbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .choices{grid-template-columns:1fr}
+  .memory-grid{grid-template-columns:repeat(2,1fr)}
+  .action-row{justify-content:center}
+  .letter-board{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .big-btn{width:100%;font-size:1.05rem;min-height:56px}
+  .action{font-size:1.04rem;min-height:54px;padding:12px 18px}
+}
+</style>
+</head>
+<body>
+<div class="particles" id="particles"></div>
+<div class="confetti" id="confetti"></div>
+<div class="floaters" id="floaters"></div>
+
+<section class="screen" id="homeScreen">
+  <div class="panel hero">
+    <div class="hero-copy">
+      <div class="logo">English Galaxy Deluxe</div>
+      <div class="subtitle">משחק שמיעה ותמונה ללמידת אנגלית בקצב של הילדים</div>
+      <div class="small">שומעים מילה באנגלית, בוחרים את האימוג׳י המתאים, ומתקדמים עם כוכבים, רצפים ופרסים.</div>
+      <div class="hero-badges">
+        <span class="hero-badge">🎧 שמיעה פעילה</span>
+        <span class="hero-badge">🧠 זיכרון חזותי</span>
+        <span class="hero-badge">⭐ חיזוק חיובי</span>
+      </div>
+    </div>
+    <div class="hero-cards">
+      <div class="hero-card"><strong>סיבובים קצרים וברורים</strong><span>מעולה לתרגול יומי בלי עומס.</span></div>
+      <div class="hero-card"><strong>שליטה מלאה להורים</strong><span>ניהול מאגר מילים לפי רמת קושי ועולם.</span></div>
+      <div class="hero-card"><strong>משוב מיידי לילדים</strong><span>קול, מדבקות ואוצרות כדי לשמור על מוטיבציה.</span></div>
+    </div>
+  </div>
+
+  <div class="home-grid">
+    <div class="stack">
+      <div class="panel">
+        <h2>מצבי משחק</h2>
+        <div class="btn-row">
+          <button class="big-btn" onclick="startMode('listen')">🔊 שמע ובחר</button>
+          <button class="big-btn gold" onclick="startMode('challenge')">🚀 אתגר מהיר</button>
+          <button class="big-btn" onclick="startMode('memory')">🧠 זיכרון קולי</button>
+          <button class="big-btn" onclick="startMode('letters')">🔤 למידת אותיות</button>
+          <button class="big-btn" onclick="openChest()">🎁 פתיחת אוצר</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>עולמות</h2>
+        <div class="level-row" id="categoryRow"></div>
+      </div>
+
+      <div class="panel">
+        <h2>חברים מלווים</h2>
+        <div class="pet-row" id="petRow"></div>
+      </div>
+    </div>
+
+    <div class="stack">
+      <div class="panel">
+        <h2>פרסים שאפשר לפתוח</h2>
+        <div class="reward-row" id="rewardRow"></div>
+      </div>
+
+      <div class="panel">
+        <h2>אלבום מדבקות</h2>
+        <div class="album-grid" id="albumGrid"></div>
+      </div>
+
+      <div class="panel">
+        <h2>התקדמות מהירה</h2>
+        <div class="summary-box">
+          <div class="summary-pill">📚 מילים פעילות: <span id="activeCount">0</span></div>
+          <div class="summary-pill">🧩 סה״כ מילים: <span id="totalCount">0</span></div>
+          <div class="summary-pill">🎚️ קושי: <span id="difficultyLabel">1</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>הגדרות הורה</h2>
+    <div class="settings-wrap">
+      <div class="settings-left">
+        <div class="btn-row" style="justify-content:flex-start">
+          <button class="tiny-btn" onclick="setAllWords(true)">הכל פעיל</button>
+          <button class="tiny-btn" onclick="setAllWords(false)">כיבוי הכל</button>
+          <button class="tiny-btn" onclick="enableByLevel(1)">רק קל</button>
+          <button class="tiny-btn" onclick="enableByLevel(2)">קל + בינוני</button>
+          <button class="tiny-btn" onclick="enableByLevel(4)">הכל לפי קושי</button>
+        </div>
+        <div style="margin-top:10px">
+          <label for="wordSearch">חיפוש מילה</label>
+          <input id="wordSearch" name="word_search" oninput="renderWordList()" placeholder="למשל dog / כלב" style="width:100%;margin-top:6px;padding:9px 10px;border:1px solid #cfe8f8;border-radius:12px;background:#fff">
+        </div>
+        <div style="margin-top:10px">
+          <label for="settingsCategory">סינון עולם</label>
+          <select id="settingsCategory" name="settings_category" onchange="renderWordList()" style="width:100%;margin-top:6px;padding:9px 10px;border:1px solid #cfe8f8;border-radius:12px;background:#fff">
+            <option value="all">הכל</option>
+            <option value="animals_and_nature">חיות וטבע</option>
+            <option value="food_and_drink">אוכל ושתייה</option>
+            <option value="travel_and_places">מקומות ותחבורה</option>
+            <option value="objects">חפצים</option>
+            <option value="activities">פעילויות</option>
+            <option value="smileys_and_emotion">פרצופים שמחים</option>
+          </select>
+        </div>
+      </div>
+      <div class="settings-right">
+        <div class="word-list" id="wordList"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="audioSettingsPanel">
+    <h2>🔊 הגדרות קול</h2>
+    <div style="color:#58718a;font-size:.92rem">טוען קולות...</div>
+  </div>
+
+  <div class="panel" style="text-align:right;direction:rtl">
+    <h2>הערה להורים</h2>
+    <div class="small" style="max-width:none;margin:0">
+      המשחק נבנה כדי לאפשר תרגול קצר, ברור ונעים. מומלץ לשחק יחד עם הילדים, לחזור בקול על המילים, ולעזור בהתאם לרמת הקושי שבחרתם.
+    </div>
+  </div>
+</section>
+
+<section class="screen hidden" id="gameScreen">
+  <div class="topbar">
+    <div class="top-pill">⭐ כוכבים <strong id="stars">0</strong></div>
+    <div class="top-pill">🔥 רצף <strong id="streak">0</strong></div>
+    <div class="top-pill">🎯 שלב <strong id="round">1</strong></div>
+    <div class="top-pill">🎁 אוצר <strong id="chests">0</strong></div>
+    <div class="top-pill">🐾 חבר <strong id="petTop">נובה</strong></div>
+    <div class="top-pill">📶 קושי <strong id="liveDifficulty">1</strong></div>
+  </div>
+
+  <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  <div class="progress-wrap challenge-wrap" id="challengeWrap"><div class="progress challenge-progress" id="challengeProgress"></div></div>
+
+  <div class="layout" id="listenLayout">
+    <div class="left-card">
+      <div class="mascot" id="mascot">🦉</div>
+      <div class="speech">
+        <div class="title" id="speechTitle">הקשיבי למילה</div>
+        <div class="line" id="speechLine">המילה תחזור אוטומטית עד שנבחרת תשובה</div>
+      </div>
+      <div class="emoji-big" id="previewEmoji">❓</div>
+      <div class="small" style="text-align:center">פירוש: <strong id="previewHe">מופיע אחרי תשובה</strong></div>
+    </div>
+
+    <div class="right-card">
+      <div class="question" id="questionText">הקשיבי למילה באנגלית ובחרי את האימוג׳י הנכון</div>
+      <div class="choices" id="choices"></div>
+      <div class="action-row">
+        <button class="action" onclick="repeatWord(true)">🔊 שוב</button>
+        <button class="action alt" onclick="nextRound()">➡️ הבא</button>
+        <button class="action warn" onclick="showHint()">💡 רמז</button>
+        <button class="action" onclick="toggleAutoPlay()"><span id="autoPlayLabel">⏱️ חזרה אוטומטית: פועלת</span></button>
+        <button class="action alt" onclick="openDisclaimer()">ℹ️ הערה</button>
+        <button class="action alt" onclick="goHome()">🏠 בית</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden" id="memoryLayout">
+    <div class="panel">
+      <h2>משחק זיכרון קולי</h2>
+      <div class="small">מתאימים בין קלף אימוג׳י לקלף מילה. לחיצה על קלף מילה משמיעה אותה באנגלית.</div>
+      <div class="memory-grid" id="memoryGrid"></div>
+      <div class="action-row" style="margin-top:12px">
+        <button class="action" onclick="buildMemory()">🔄 ערבוב חדש</button>
+        <button class="action alt" onclick="goHome()">🏠 בית</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden" id="lettersLayout">
+    <div class="letters-wrap">
+      <div class="letter-main">
+        <div class="small" style="margin-top:0">לומדים אות חדשה: מסתכלים, שומעים, ואז מגלים מילה שמתחילה באותה אות</div>
+        <div class="letter-char" id="letterChar">A</div>
+        <div class="letter-hint" id="letterHint">אות A - לחצו על אות בלוח כדי לסובב ולגלות מילה.</div>
+        <button class="action" style="margin-top:12px" onclick="speakLetter()">🔊 השמעת האות שוב</button>
+        <div class="letter-progress">✅ נלמדו: <span id="letterProgress">0/26</span></div>
+
+        <div class="action-row" style="justify-content:center;margin-top:10px">
+          <button class="action warn" onclick="playCurrentLetterWord()">🔊 השמע מילה + תרגום</button>
+          <button class="action alt" onclick="nextLetterRound(true)">➡️ אות הבאה</button>
+          <button class="action alt" onclick="goHome()">🏠 בית</button>
+        </div>
+
+        <div class="reveal-box" id="letterRevealBox">
+          <div class="reveal-word-emoji" id="letterWordEmoji">❔</div>
+          <div class="reveal-word-en" id="letterWordEn">?</div>
+          <div class="reveal-word-he" id="letterWordHe">פירוש: ?</div>
+        </div>
+
+        <h2 style="margin-top:14px">לוח האותיות</h2>
+        <div class="small" style="margin-top:0">לחיצה על אות מסובבת את הכרטיס, מגלה מילה עם אימוג׳י, ומשמיעה אנגלית + תרגום</div>
+        <div class="letter-board" id="letterBoard"></div>
+        <div class="action-row" style="justify-content:center">
+          <button class="action alt" onclick="resetLetterBoard()">↺ איפוס לוח</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="overlay" id="resultOverlay">
+  <div class="modal">
+    <div class="big" id="resultEmoji">🎉</div>
+    <h3 id="resultTitle">כל הכבוד!</h3>
+    <p id="resultText">נכון מאוד</p>
+    <div class="btn-row" style="margin-top:14px">
+      <button class="big-btn gold" onclick="closeResult(true)">עוד סיבוב</button>
+      <button class="big-btn" onclick="closeResult(false)">סגירה</button>
+      <button class="big-btn" onclick="repeatWord(true)">שוב לשמוע</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="infoOverlay">
+  <div class="modal">
+    <div class="big">ℹ️</div>
+    <h3>הערה חשובה להורים</h3>
+    <p>המשחק הזה הוא כלי תרגול ידידותי. מומלץ לשלב משחק משותף, לחזק מילים חדשות, ולעבור בהדרגה בין רמות קושי.</p>
+    <div class="btn-row" style="margin-top:14px">
+      <button class="big-btn gold" onclick="closeDisclaimer()">סגירה</button>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/words.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/tts.js"></script>
+<script src="scripts/state.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/game.js"></script>
+<script>
+  loadTtsSettings();
+  loadVoices();
+  loadSettings();
+  renderHome();
+  updateHud();
+  $('autoPlayLabel').textContent = '⏱️ חזרה אוטומטית: פועלת';
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) { stopSpeech(); clearRepeat(); clearRoundSpeakTimeout(); clearChallengeTimer(); }
+  });
+  window.addEventListener('beforeunload', function() { stopSpeech(); });
+</script>
+</body>
+</html>
