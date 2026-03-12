@@ -1,0 +1,29 @@
+# macOS
+.DS_Store
+
+# Editor / local workspace
+.vscode/
+
+# Local agent tooling and prompts
+vscode-agent-pack/
+
+# Secrets and local certs
+cert.pem
+key.pem
+*.pem
+*.key
+*.env
+/Users/admin/Downloads/FLAGS/github-pages/games/Test_zone
+games/Test_zone
+/Users/admin/Downloads/FLAGS/github-pages/SESSION_LOG.md
+SESSION_LOG.md
+
+# Local development helpers that should not ship to GitHub Pages
+run.command
+gamedata.json
+HANDOFF.md
+
+# Logs and temp files
+*.log
+*.tmp
+*.temp
