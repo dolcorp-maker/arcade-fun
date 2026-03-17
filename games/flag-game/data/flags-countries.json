@@ -120,11 +120,6 @@
     "nameHe": "בנין"
   },
   {
-    "code": "bl",
-    "name": "Saint Barthélemy",
-    "nameHe": "סן בארתלמי"
-  },
-  {
     "code": "bm",
     "name": "Bermuda",
     "nameHe": "ברמודה"
@@ -385,11 +380,6 @@
     "nameHe": "גאורגיה"
   },
   {
-    "code": "gf",
-    "name": "French Guiana",
-    "nameHe": "גיאנה הצרפתית"
-  },
-  {
     "code": "gg",
     "name": "Guernsey",
     "nameHe": "גרנסי"
@@ -418,11 +408,6 @@
     "code": "gn",
     "name": "Guinea",
     "nameHe": "גינאה"
-  },
-  {
-    "code": "gp",
-    "name": "Guadeloupe",
-    "nameHe": "גואדלופ"
   },
   {
     "code": "gq",
@@ -680,11 +665,6 @@
     "nameHe": "מונטנגרו"
   },
   {
-    "code": "mf",
-    "name": "Saint Martin",
-    "nameHe": "סן מרטן"
-  },
-  {
     "code": "mg",
     "name": "Madagascar",
     "nameHe": "מדגסקר"
@@ -875,11 +855,6 @@
     "nameHe": "פולין"
   },
   {
-    "code": "pm",
-    "name": "Saint Pierre and Miquelon",
-    "nameHe": "סן פייר ומיקלון"
-  },
-  {
     "code": "pn",
     "name": "Pitcairn Islands",
     "nameHe": "איי פיטקרן"
@@ -913,11 +888,6 @@
     "code": "qa",
     "name": "Qatar",
     "nameHe": "קטר"
-  },
-  {
-    "code": "re",
-    "name": "Réunion",
-    "nameHe": "ראוניון"
   },
   {
     "code": "ro",
@@ -968,11 +938,6 @@
     "code": "sg",
     "name": "Singapore",
     "nameHe": "סינגפור"
-  },
-  {
-    "code": "sh",
-    "name": "Saint Helena",
-    "nameHe": "סנט הלנה"
   },
   {
     "code": "si",
@@ -1180,11 +1145,6 @@
     "nameHe": "ונואטו"
   },
   {
-    "code": "wf",
-    "name": "Wallis and Futuna",
-    "nameHe": "ווליס ופוטונה"
-  },
-  {
     "code": "ws",
     "name": "Samoa",
     "nameHe": "סמואה"
@@ -1198,11 +1158,6 @@
     "code": "ye",
     "name": "Yemen",
     "nameHe": "תימן"
-  },
-  {
-    "code": "yt",
-    "name": "Mayotte",
-    "nameHe": "מאיוט"
   },
   {
     "code": "za",

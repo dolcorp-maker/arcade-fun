@@ -8,6 +8,14 @@
     "continent": "Asia"
   },
   {
+    "code": "ax",
+    "country": "Åland Islands",
+    "countryHe": "איי אולנד",
+    "capital": "Mariehamn",
+    "capitalHe": "מריהמן",
+    "continent": "Europe"
+  },
+  {
     "code": "al",
     "country": "Albania",
     "countryHe": "אלבניה",
@@ -24,6 +32,14 @@
     "continent": "Africa"
   },
   {
+    "code": "as",
+    "country": "American Samoa",
+    "countryHe": "סמואה האמריקנית",
+    "capital": "Pago Pago",
+    "capitalHe": "פאגו פאגו",
+    "continent": "Oceania"
+  },
+  {
     "code": "ad",
     "country": "Andorra",
     "countryHe": "אנדורה",
@@ -38,6 +54,14 @@
     "capital": "Luanda",
     "capitalHe": "לואנדה",
     "continent": "Africa"
+  },
+  {
+    "code": "ai",
+    "country": "Anguilla",
+    "countryHe": "אנגווילה",
+    "capital": "The Valley",
+    "capitalHe": "דה ואלי",
+    "continent": "North America"
   },
   {
     "code": "ag",
@@ -62,6 +86,14 @@
     "capital": "Yerevan",
     "capitalHe": "ירוואן",
     "continent": "Asia"
+  },
+  {
+    "code": "aw",
+    "country": "Aruba",
+    "countryHe": "ארובה",
+    "capital": "Oranjestad",
+    "capitalHe": "אורנייסטאד",
+    "continent": "North America"
   },
   {
     "code": "au",
@@ -152,6 +184,14 @@
     "continent": "Africa"
   },
   {
+    "code": "bm",
+    "country": "Bermuda",
+    "countryHe": "ברמודה",
+    "capital": "Hamilton",
+    "capitalHe": "המילטון",
+    "continent": "North America"
+  },
+  {
     "code": "bt",
     "country": "Bhutan",
     "countryHe": "בהוטן",
@@ -190,6 +230,14 @@
     "capital": "Brasilia",
     "capitalHe": "ברזיליה",
     "continent": "South America"
+  },
+  {
+    "code": "vg",
+    "country": "British Virgin Islands",
+    "countryHe": "איי הבתולה הבריטיים",
+    "capital": "Road Town",
+    "capitalHe": "רוד טאון",
+    "continent": "North America"
   },
   {
     "code": "bn",
@@ -248,12 +296,36 @@
     "continent": "North America"
   },
   {
+    "code": "ic",
+    "country": "Canary Islands",
+    "countryHe": "איי קנריה",
+    "capital": "Las Palmas",
+    "capitalHe": "לס פלמס",
+    "continent": "Africa"
+  },
+  {
     "code": "cv",
     "country": "Cape Verde",
     "countryHe": "כף ורדה",
     "capital": "Praia",
     "capitalHe": "פראיה",
     "continent": "Africa"
+  },
+  {
+    "code": "bq",
+    "country": "Caribbean Netherlands",
+    "countryHe": "הולנד הקריבית",
+    "capital": "Kralendijk",
+    "capitalHe": "קראלנדייק",
+    "continent": "North America"
+  },
+  {
+    "code": "ky",
+    "country": "Cayman Islands",
+    "countryHe": "איי קיימן",
+    "capital": "George Town",
+    "capitalHe": "ג'ורג' טאון",
+    "continent": "North America"
   },
   {
     "code": "cf",
@@ -288,6 +360,22 @@
     "continent": "Asia"
   },
   {
+    "code": "cx",
+    "country": "Christmas Island",
+    "countryHe": "האי כריסטמס",
+    "capital": "Flying Fish Cove",
+    "capitalHe": "פלאינג פיש קוב",
+    "continent": "Oceania"
+  },
+  {
+    "code": "cc",
+    "country": "Cocos Islands",
+    "countryHe": "איי קוקוס",
+    "capital": "West Island",
+    "capitalHe": "האי המערבי",
+    "continent": "Oceania"
+  },
+  {
     "code": "co",
     "country": "Colombia",
     "countryHe": "קולומביה",
@@ -302,6 +390,14 @@
     "capital": "Moroni",
     "capitalHe": "מורוני",
     "continent": "Africa"
+  },
+  {
+    "code": "ck",
+    "country": "Cook Islands",
+    "countryHe": "איי קוק",
+    "capital": "Avarua",
+    "capitalHe": "אוורואה",
+    "continent": "Oceania"
   },
   {
     "code": "cr",
@@ -328,6 +424,14 @@
     "continent": "North America"
   },
   {
+    "code": "cw",
+    "country": "Curaçao",
+    "countryHe": "קוראסאו",
+    "capital": "Willemstad",
+    "capitalHe": "וילמסטאד",
+    "continent": "North America"
+  },
+  {
     "code": "cy",
     "country": "Cyprus",
     "countryHe": "קפריסין",
@@ -342,14 +446,6 @@
     "capital": "Prague",
     "capitalHe": "פראג",
     "continent": "Europe"
-  },
-  {
-    "code": "cd",
-    "country": "DR Congo",
-    "countryHe": "קונגו הדמוקרטית",
-    "capital": "Kinshasa",
-    "capitalHe": "קינשאסה",
-    "continent": "Africa"
   },
   {
     "code": "dk",
@@ -382,6 +478,14 @@
     "capital": "Santo Domingo",
     "capitalHe": "סנטו דומינגו",
     "continent": "North America"
+  },
+  {
+    "code": "cd",
+    "country": "DR Congo",
+    "countryHe": "קונגו הדמוקרטית",
+    "capital": "Kinshasa",
+    "capitalHe": "קינשאסה",
+    "continent": "Africa"
   },
   {
     "code": "ec",
@@ -448,6 +552,22 @@
     "continent": "Africa"
   },
   {
+    "code": "fk",
+    "country": "Falkland Islands",
+    "countryHe": "איי פוקלנד",
+    "capital": "Stanley",
+    "capitalHe": "סטנלי",
+    "continent": "South America"
+  },
+  {
+    "code": "fo",
+    "country": "Faroe Islands",
+    "countryHe": "איי פארו",
+    "capital": "Tórshavn",
+    "capitalHe": "טורסהאבן",
+    "continent": "Europe"
+  },
+  {
     "code": "fj",
     "country": "Fiji",
     "countryHe": "פיג'י",
@@ -470,6 +590,14 @@
     "capital": "Paris",
     "capitalHe": "פריז",
     "continent": "Europe"
+  },
+  {
+    "code": "pf",
+    "country": "French Polynesia",
+    "countryHe": "פולינזיה הצרפתית",
+    "capital": "Papeete",
+    "capitalHe": "פאפטה",
+    "continent": "Oceania"
   },
   {
     "code": "ga",
@@ -512,12 +640,28 @@
     "continent": "Africa"
   },
   {
+    "code": "gi",
+    "country": "Gibraltar",
+    "countryHe": "גיברלטר",
+    "capital": "Gibraltar",
+    "capitalHe": "גיברלטר",
+    "continent": "Europe"
+  },
+  {
     "code": "gr",
     "country": "Greece",
     "countryHe": "יוון",
     "capital": "Athens",
     "capitalHe": "אתונה",
     "continent": "Europe"
+  },
+  {
+    "code": "gl",
+    "country": "Greenland",
+    "countryHe": "גרינלנד",
+    "capital": "Nuuk",
+    "capitalHe": "נואוק",
+    "continent": "North America"
   },
   {
     "code": "gd",
@@ -528,12 +672,28 @@
     "continent": "North America"
   },
   {
+    "code": "gu",
+    "country": "Guam",
+    "countryHe": "גואם",
+    "capital": "Hagåtña",
+    "capitalHe": "הגטנה",
+    "continent": "Oceania"
+  },
+  {
     "code": "gt",
     "country": "Guatemala",
     "countryHe": "גואטמלה",
     "capital": "Guatemala City",
     "capitalHe": "גואטמלה סיטי",
     "continent": "North America"
+  },
+  {
+    "code": "gg",
+    "country": "Guernsey",
+    "countryHe": "גרנסי",
+    "capital": "St. Peter Port",
+    "capitalHe": "סנט פיטר פורט",
+    "continent": "Europe"
   },
   {
     "code": "gn",
@@ -574,6 +734,14 @@
     "capital": "Tegucigalpa",
     "capitalHe": "טגוסיגלפה",
     "continent": "North America"
+  },
+  {
+    "code": "hk",
+    "country": "Hong Kong",
+    "countryHe": "הונג קונג",
+    "capital": "Hong Kong",
+    "capitalHe": "הונג קונג",
+    "continent": "Asia"
   },
   {
     "code": "hu",
@@ -632,6 +800,14 @@
     "continent": "Europe"
   },
   {
+    "code": "im",
+    "country": "Isle of Man",
+    "countryHe": "האי מאן",
+    "capital": "Douglas",
+    "capitalHe": "דאגלס",
+    "continent": "Europe"
+  },
+  {
     "code": "il",
     "country": "Israel",
     "countryHe": "ישראל",
@@ -670,6 +846,14 @@
     "capital": "Tokyo",
     "capitalHe": "טוקיו",
     "continent": "Asia"
+  },
+  {
+    "code": "je",
+    "country": "Jersey",
+    "countryHe": "ג'רסי",
+    "capital": "Saint Helier",
+    "capitalHe": "סן הלייר",
+    "continent": "Europe"
   },
   {
     "code": "jo",
@@ -800,6 +984,14 @@
     "continent": "Europe"
   },
   {
+    "code": "mo",
+    "country": "Macao",
+    "countryHe": "מקאו",
+    "capital": "Macao",
+    "capitalHe": "מקאו",
+    "continent": "Asia"
+  },
+  {
     "code": "mg",
     "country": "Madagascar",
     "countryHe": "מדגסקר",
@@ -854,6 +1046,14 @@
     "capital": "Majuro",
     "capitalHe": "מג'ורו",
     "continent": "Oceania"
+  },
+  {
+    "code": "mq",
+    "country": "Martinique",
+    "countryHe": "מרטיניק",
+    "capital": "Fort-de-France",
+    "capitalHe": "פור-דה-פראנס",
+    "continent": "North America"
   },
   {
     "code": "mr",
@@ -920,6 +1120,14 @@
     "continent": "Europe"
   },
   {
+    "code": "ms",
+    "country": "Montserrat",
+    "countryHe": "מונסראט",
+    "capital": "Brades",
+    "capitalHe": "ברידס",
+    "continent": "North America"
+  },
+  {
     "code": "ma",
     "country": "Morocco",
     "countryHe": "מרוקו",
@@ -976,6 +1184,14 @@
     "continent": "Europe"
   },
   {
+    "code": "nc",
+    "country": "New Caledonia",
+    "countryHe": "קלדוניה החדשה",
+    "capital": "Nouméa",
+    "capitalHe": "נומאה",
+    "continent": "Oceania"
+  },
+  {
     "code": "nz",
     "country": "New Zealand",
     "countryHe": "ניו זילנד",
@@ -1008,6 +1224,22 @@
     "continent": "Africa"
   },
   {
+    "code": "nu",
+    "country": "Niue",
+    "countryHe": "ניואה",
+    "capital": "Alofi",
+    "capitalHe": "אלופי",
+    "continent": "Oceania"
+  },
+  {
+    "code": "nf",
+    "country": "Norfolk Island",
+    "countryHe": "האי נורפוק",
+    "capital": "Kingston",
+    "capitalHe": "קינגסטון",
+    "continent": "Oceania"
+  },
+  {
     "code": "kp",
     "country": "North Korea",
     "countryHe": "קוריאה הצפונית",
@@ -1022,6 +1254,14 @@
     "capital": "Skopje",
     "capitalHe": "סקופיה",
     "continent": "Europe"
+  },
+  {
+    "code": "mp",
+    "country": "Northern Mariana Islands",
+    "countryHe": "איי מריאנה הצפוניים",
+    "capital": "Capitol Hill",
+    "capitalHe": "קפיטול היל",
+    "continent": "Oceania"
   },
   {
     "code": "no",
@@ -1054,6 +1294,14 @@
     "capital": "Ngerulmud",
     "capitalHe": "נגרולמוד",
     "continent": "Oceania"
+  },
+  {
+    "code": "ps",
+    "country": "Palestine",
+    "countryHe": "פלסטין",
+    "capital": "Ramallah",
+    "capitalHe": "רמאללה",
+    "continent": "Asia"
   },
   {
     "code": "pa",
@@ -1096,6 +1344,14 @@
     "continent": "Asia"
   },
   {
+    "code": "pn",
+    "country": "Pitcairn Islands",
+    "countryHe": "איי פיטקרן",
+    "capital": "Adamstown",
+    "capitalHe": "אדמסטאון",
+    "continent": "Oceania"
+  },
+  {
     "code": "pl",
     "country": "Poland",
     "countryHe": "פולין",
@@ -1110,6 +1366,14 @@
     "capital": "Lisbon",
     "capitalHe": "ליסבון",
     "continent": "Europe"
+  },
+  {
+    "code": "pr",
+    "country": "Puerto Rico",
+    "countryHe": "פוארטו ריקו",
+    "capital": "San Juan",
+    "capitalHe": "סן חואן",
+    "continent": "North America"
   },
   {
     "code": "qa",
@@ -1192,6 +1456,14 @@
     "continent": "Europe"
   },
   {
+    "code": "st",
+    "country": "São Tomé and Príncipe",
+    "countryHe": "סאו טומה ופרינסיפה",
+    "capital": "Sao Tome",
+    "capitalHe": "סאו טומה",
+    "continent": "Africa"
+  },
+  {
     "code": "sa",
     "country": "Saudi Arabia",
     "countryHe": "ערב הסעודית",
@@ -1238,6 +1510,14 @@
     "capital": "Singapore",
     "capitalHe": "סינגפור",
     "continent": "Asia"
+  },
+  {
+    "code": "sx",
+    "country": "Sint Maarten",
+    "countryHe": "סינט מארטן",
+    "capital": "Philipsburg",
+    "capitalHe": "פיליפסבורג",
+    "continent": "North America"
   },
   {
     "code": "sk",
@@ -1328,6 +1608,14 @@
     "continent": "South America"
   },
   {
+    "code": "sj",
+    "country": "Svalbard and Jan Mayen",
+    "countryHe": "סוולבארד",
+    "capital": "Longyearbyen",
+    "capitalHe": "לונגיירביין",
+    "continent": "Europe"
+  },
+  {
     "code": "se",
     "country": "Sweden",
     "countryHe": "שוודיה",
@@ -1350,14 +1638,6 @@
     "capital": "Damascus",
     "capitalHe": "דמשק",
     "continent": "Asia"
-  },
-  {
-    "code": "st",
-    "country": "São Tomé and Príncipe",
-    "countryHe": "סאו טומה ופרינסיפה",
-    "capital": "Sao Tome",
-    "capitalHe": "סאו טומה",
-    "continent": "Africa"
   },
   {
     "code": "tw",
@@ -1408,6 +1688,14 @@
     "continent": "Africa"
   },
   {
+    "code": "tk",
+    "country": "Tokelau",
+    "countryHe": "טוקלאו",
+    "capital": "Nukunonu",
+    "capitalHe": "נוקונונו",
+    "continent": "Oceania"
+  },
+  {
     "code": "to",
     "country": "Tonga",
     "countryHe": "טונגה",
@@ -1446,6 +1734,14 @@
     "capital": "Ashgabat",
     "capitalHe": "אשגבת",
     "continent": "Asia"
+  },
+  {
+    "code": "tc",
+    "country": "Turks and Caicos Islands",
+    "countryHe": "איי טורקס וקייקוס",
+    "capital": "Cockburn Town",
+    "capitalHe": "קוקבורן טאון",
+    "continent": "North America"
   },
   {
     "code": "tv",
@@ -1504,6 +1800,14 @@
     "continent": "South America"
   },
   {
+    "code": "vi",
+    "country": "US Virgin Islands",
+    "countryHe": "איי הבתולה האמריקניים",
+    "capital": "Charlotte Amalie",
+    "capitalHe": "שרלוט אמאלי",
+    "continent": "North America"
+  },
+  {
     "code": "uz",
     "country": "Uzbekistan",
     "countryHe": "אוזבקיסטן",
@@ -1542,6 +1846,14 @@
     "capital": "Hanoi",
     "capitalHe": "האנוי",
     "continent": "Asia"
+  },
+  {
+    "code": "eh",
+    "country": "Western Sahara",
+    "countryHe": "סהרה המערבית",
+    "capital": "El Aaiún",
+    "capitalHe": "אל עיון",
+    "continent": "Africa"
   },
   {
     "code": "ye",

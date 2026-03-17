@@ -6,6 +6,7 @@
   <title>Flag Flow Arena — Dashboard</title>
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/dashboard.css" />
+  <script>(function(){var t=localStorage.getItem('flagGame_theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
 
@@ -15,6 +16,7 @@
     <span class="build-tag" id="buildTag">v3.0.0</span>
   </div>
   <div class="topbar-right">
+    <button class="btn-ghost" id="themeToggleBtn" title="Change theme">🌙</button>
     <button class="btn-ghost" id="langBtn" style="min-width:6rem;">עברית</button>
   </div>
 </header>
@@ -117,6 +119,7 @@
 </div>
 
 <script src="scripts/utils.js"></script>
+<script src="scripts/themes.js"></script>
 <script src="scripts/i18n.js"></script>
 <script src="scripts/storage.js"></script>
 <script src="scripts/achievements.js"></script>

@@ -20,6 +20,88 @@
   --shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
+/* ── Light theme ──────────────────────────────────────────────────────────── */
+[data-theme="light"] {
+  --bg: #eef1fc;
+  --bg2: #e0e6f8;
+  --card: rgba(255,255,255,0.92);
+  --card-border: rgba(100,80,200,0.14);
+  --accent: #7c3aed;
+  --accent-dim: rgba(124,58,237,0.1);
+  --green: #15803d;
+  --green-dim: rgba(21,128,61,0.1);
+  --red: #b91c1c;
+  --red-dim: rgba(185,28,28,0.1);
+  --blue: #1d4ed8;
+  --blue-dim: rgba(29,78,216,0.1);
+  --muted: rgba(30,20,80,0.45);
+  --text: #1e1340;
+  --shadow: 0 4px 24px rgba(80,60,180,0.12);
+}
+[data-theme="light"] body {
+  background: linear-gradient(150deg, #eef1fc 0%, #e4ecff 100%);
+}
+[data-theme="light"] .btn-primary { color: #fff; }
+[data-theme="light"] select option { background: #fff; }
+
+/* ── Neon theme ───────────────────────────────────────────────────────────── */
+[data-theme="neon"] {
+  --bg: #06060f;
+  --bg2: #0c0c1e;
+  --card: rgba(0,255,220,0.04);
+  --card-border: rgba(0,255,220,0.18);
+  --accent: #00ffd5;
+  --accent-dim: rgba(0,255,213,0.12);
+  --green: #39ff6e;
+  --green-dim: rgba(57,255,110,0.12);
+  --red: #ff2079;
+  --red-dim: rgba(255,32,121,0.12);
+  --blue: #00cfff;
+  --blue-dim: rgba(0,207,255,0.12);
+  --muted: rgba(180,255,245,0.45);
+  --text: #ddfff8;
+  --shadow: 0 4px 30px rgba(0,255,213,0.15);
+}
+[data-theme="neon"] body {
+  background: radial-gradient(ellipse at 20% 20%, #100424 0%, #06060f 65%);
+}
+[data-theme="neon"] .card {
+  box-shadow: 0 0 22px rgba(0,255,213,0.07), var(--shadow);
+}
+[data-theme="neon"] h1 {
+  text-shadow: 0 0 28px rgba(0,255,213,0.45);
+}
+[data-theme="neon"] .eyebrow {
+  text-shadow: 0 0 10px var(--accent);
+}
+[data-theme="neon"] .btn-primary {
+  box-shadow: 0 0 16px rgba(0,255,213,0.45);
+  letter-spacing: 0.03em;
+}
+[data-theme="neon"] .btn-primary:hover:not(:disabled) {
+  box-shadow: 0 0 28px rgba(0,255,213,0.65);
+}
+[data-theme="neon"] .mode-btn.active,
+[data-theme="neon"] .gametype-btn.active {
+  box-shadow: 0 0 18px rgba(0,255,213,0.2);
+}
+[data-theme="neon"] .pill {
+  box-shadow: 0 0 8px currentColor;
+}
+[data-theme="neon"] .feedback.good {
+  text-shadow: 0 0 8px var(--green);
+}
+[data-theme="neon"] .feedback.bad {
+  text-shadow: 0 0 8px var(--red);
+}
+
+/* ── Theme toggle button ──────────────────────────────────────────────────── */
+#themeToggleBtn {
+  font-size: 1.1rem;
+  padding: 0.38rem 0.6rem;
+  min-width: 2.4rem;
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { font-size: 16px; }

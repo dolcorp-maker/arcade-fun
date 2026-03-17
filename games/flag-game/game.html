@@ -6,6 +6,7 @@
   <title>Flag Flow Arena — Game</title>
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/game.css" />
+  <script>(function(){var t=localStorage.getItem('flagGame_theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
 
@@ -18,6 +19,7 @@
     </div>
   </div>
   <div class="game-topbar-right">
+    <button class="btn-ghost" id="themeToggleBtn" title="Change theme">🌙</button>
     <span class="pill" id="modePill">Chill</span>
     <span class="pill blue" id="typePill">Flag</span>
   </div>
@@ -141,6 +143,7 @@
 </div>
 
 <script src="scripts/utils.js"></script>
+<script src="scripts/themes.js"></script>
 <script src="scripts/i18n.js"></script>
 <script src="scripts/storage.js"></script>
 <script src="scripts/data.js"></script>
