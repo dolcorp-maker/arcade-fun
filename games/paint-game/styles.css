@@ -241,10 +241,10 @@ html, body {
   background: #f8f8f8;
   transition: border-color 0.12s, transform 0.12s, box-shadow 0.12s;
   display: grid;
-  grid-template-rows: minmax(110px, 1fr) auto;
+  grid-template-rows: 1fr;
   align-items: stretch;
-  padding: 10px;
-  gap: 8px;
+  padding: 6px;
+  gap: 0;
 }
 .drawing-thumb:hover, .drawing-thumb:focus {
   border-color: var(--clr-primary);
@@ -912,8 +912,27 @@ html, body {
    ============================================================ */
 @media (max-width: 480px) {
   .swatch {
-    width: 44px;
-    height: 44px;
+    width: 34px;
+    height: 34px;
+  }
+  .palette {
+    gap: 5px;
+    padding: 4px 8px 2px;
+  }
+  .editor-actions {
+    padding: 3px 12px 5px;
+  }
+  .action-btn {
+    min-height: 38px;
+    font-size: 0.9rem;
+  }
+  .fill-modes {
+    padding: 3px 8px;
+    gap: 4px;
+  }
+  .fill-btn {
+    font-size: 0.65rem;
+    padding: 5px 3px;
   }
   .home-card {
     padding: 32px 24px;
@@ -927,10 +946,6 @@ html, body {
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 12px;
   }
-  .fill-btn {
-    font-size: 0.7rem;
-    padding: 7px 4px;
-  }
   .sticker-emoji {
     width: 44px;
     height: 44px;
@@ -940,34 +955,35 @@ html, body {
 
 @media (max-height: 600px) {
   .swatch {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
   }
   .palette {
-    padding: 6px;
-    gap: 6px;
+    padding: 3px 8px 2px;
+    gap: 4px;
   }
   .editor-actions {
-    padding: 4px 12px 8px;
+    padding: 2px 12px 4px;
   }
   .action-btn {
-    min-height: 46px;
+    min-height: 34px;
+    font-size: 0.85rem;
   }
   .fill-modes {
-    padding: 4px 8px;
-    gap: 6px;
+    padding: 2px 8px;
+    gap: 4px;
   }
   .fill-btn {
-    padding: 6px 4px;
-    font-size: 0.7rem;
+    padding: 4px 3px;
+    font-size: 0.65rem;
   }
   .sticker-tray {
-    padding: 4px 10px;
+    padding: 2px 10px;
   }
   .sticker-emoji {
-    width: 40px;
-    height: 40px;
-    font-size: 1.4rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
   }
 }
 

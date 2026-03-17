@@ -398,17 +398,7 @@ function renderDrawingGrid() {
       img.alt = label;
       img.loading = "lazy";
 
-      const lbl = document.createElement("div");
-      lbl.className = "drawing-thumb-label";
-      lbl.textContent = label;
-
-      const meta = document.createElement("div");
-      meta.className = "drawing-thumb-meta";
-      meta.textContent = `${drawings.length} drawings`;
-
       btn.appendChild(img);
-      btn.appendChild(lbl);
-      btn.appendChild(meta);
       btn.addEventListener("click", () => {
         state.activeDrawingCategory = id;
         updateDrawingPickerHeader();
@@ -438,12 +428,7 @@ function renderDrawingGrid() {
     img.alt = label;
     img.loading = "lazy";
 
-    const lbl = document.createElement("div");
-    lbl.className = "drawing-thumb-label";
-    lbl.textContent = label;
-
     btn.appendChild(img);
-    btn.appendChild(lbl);
     btn.addEventListener("click", () => {
       closeDrawingPicker();
       loadBuiltinDrawing(id, label);
@@ -1050,7 +1035,7 @@ function downloadImage() {
     const url = URL.createObjectURL(blob);
     const a   = document.createElement("a");
     a.href     = url;
-    a.download = `coloring-${stamp}.png`;
+    a.download = `yeah-${stamp}.png`;
     a.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
     showStatus("Downloaded!");
