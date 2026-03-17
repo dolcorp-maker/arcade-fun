@@ -713,41 +713,64 @@ function startGlitterEffect(filledPixels, W) {
 function renderStickers() {
   const W = state.canvasWidth;
   const H = state.canvasHeight;
+  const defaultSz = Math.floor(W / 14);
   stickerCtx.clearRect(0, 0, W, H);
-  const fontSize = Math.floor(W / 14);
-  stickerCtx.font      = `${fontSize}px serif`;
   stickerCtx.textAlign    = "center";
   stickerCtx.textBaseline = "middle";
 
   state.stickers.forEach((s, idx) => {
+    const sz = s.size || defaultSz;
+    stickerCtx.font = `${sz}px serif`;
     if (idx === state.selectedStickerIdx) {
-      // Draw selection ring
+      const half = Math.floor(sz * 0.6);
+      // Selection box
       stickerCtx.strokeStyle = "#ff8c42";
       stickerCtx.lineWidth   = 4;
-      const half = Math.floor(fontSize * 0.6);
       stickerCtx.strokeRect(s.x - half, s.y - half, half * 2, half * 2);
+      // Resize handle — filled circle at bottom-right corner
+      const hx = s.x + half;
+      const hy = s.y + half;
+      stickerCtx.beginPath();
+      stickerCtx.arc(hx, hy, 14, 0, Math.PI * 2);
+      stickerCtx.fillStyle = "#ff8c42";
+      stickerCtx.fill();
+      stickerCtx.strokeStyle = "#fff";
+      stickerCtx.lineWidth   = 2;
+      stickerCtx.stroke();
     }
     stickerCtx.fillText(s.emoji, s.x, s.y);
   });
 }
 
 function findStickerAt(x, y) {
-  const W = state.canvasWidth;
-  const hitRadius = Math.floor(W / 20);
+  const defaultSz = Math.floor(state.canvasWidth / 14);
   for (let i = state.stickers.length - 1; i >= 0; i--) {
-    const s = state.stickers[i];
+    const s  = state.stickers[i];
+    const sz = s.size || defaultSz;
+    const r  = Math.floor(sz * 0.6);
     const dx = x - s.x;
     const dy = y - s.y;
-    if (Math.sqrt(dx*dx + dy*dy) <= hitRadius) {
-      return i;
-    }
+    if (Math.sqrt(dx*dx + dy*dy) <= r) return i;
   }
   return -1;
 }
 
+function findResizeHandleAt(x, y) {
+  const idx = state.selectedStickerIdx;
+  if (idx < 0) return -1;
+  const s    = state.stickers[idx];
+  const sz   = s.size || Math.floor(state.canvasWidth / 14);
+  const half = Math.floor(sz * 0.6);
+  const hx   = s.x + half;
+  const hy   = s.y + half;
+  const dx   = x - hx;
+  const dy   = y - hy;
+  return Math.sqrt(dx*dx + dy*dy) <= 22 ? idx : -1;
+}
+
 function placeSticker(x, y) {
   if (!state.pendingSticker) return;
-  state.stickers.push({ emoji: state.pendingSticker, x, y });
+  state.stickers.push({ emoji: state.pendingSticker, x, y, size: Math.floor(state.canvasWidth / 14) });
   state.selectedStickerIdx = state.stickers.length - 1;
   renderStickers();
   autosave();
@@ -808,10 +831,13 @@ function setFillMode(mode) {
 // ============================================================
 // POINTER EVENTS ON LINE CANVAS
 // ============================================================
-let _pointerStart   = null;  // {x, y} canvas coords at touch start
-let _dragStickerIdx = -1;    // index of sticker being dragged, or -1
-let _dragging       = false;
-let _lastClientPos  = null;  // {x, y} raw client coords, for pan delta
+let _pointerStart     = null;  // {x, y} canvas coords at touch start
+let _dragStickerIdx   = -1;    // index of sticker being dragged, or -1
+let _resizeStickerIdx = -1;    // index of sticker being resized, or -1
+let _resizeInitDist   = 0;     // distance from center to pointer at resize start
+let _resizeInitSize   = 0;     // sticker.size at resize start
+let _dragging         = false;
+let _lastClientPos    = null;  // {x, y} raw client coords, for pan delta
 const _activePointers = new Map(); // pointerId → {x,y} for pinch detection
 let _pinchStartDist = 0;
 let _pinchStartZoom = 1;
@@ -833,15 +859,24 @@ lineCanvas.addEventListener("pointerdown", e => {
   const { x, y } = canvasEventCoords(e);
   _pointerStart   = { x, y };
   _lastClientPos  = { x: e.clientX, y: e.clientY };
-  _dragging       = false;
-  _dragStickerIdx = -1;
+  _dragging         = false;
+  _dragStickerIdx   = -1;
+  _resizeStickerIdx = -1;
 
   if (state.stickerMode) {
-    const hitIdx = findStickerAt(x, y);
-    if (hitIdx >= 0) {
-      _dragStickerIdx          = hitIdx;
-      state.selectedStickerIdx = hitIdx;
-      renderStickers();
+    const rIdx = findResizeHandleAt(x, y);
+    if (rIdx >= 0) {
+      _resizeStickerIdx = rIdx;
+      const s = state.stickers[rIdx];
+      _resizeInitDist = Math.sqrt((x - s.x) ** 2 + (y - s.y) ** 2);
+      _resizeInitSize = s.size || Math.floor(state.canvasWidth / 14);
+    } else {
+      const hitIdx = findStickerAt(x, y);
+      if (hitIdx >= 0) {
+        _dragStickerIdx          = hitIdx;
+        state.selectedStickerIdx = hitIdx;
+        renderStickers();
+      }
     }
   }
 });
@@ -873,7 +908,18 @@ lineCanvas.addEventListener("pointermove", e => {
   }
 
   if (_dragging) {
-    if (_dragStickerIdx >= 0 && state.stickerMode) {
+    if (_resizeStickerIdx >= 0 && state.stickerMode) {
+      // Resize sticker
+      const s    = state.stickers[_resizeStickerIdx];
+      const dist = Math.sqrt((x - s.x) ** 2 + (y - s.y) ** 2);
+      if (_resizeInitDist > 0) {
+        const minSz = Math.floor(state.canvasWidth / 28);
+        const maxSz = Math.floor(state.canvasWidth / 4);
+        s.size = Math.min(maxSz, Math.max(minSz,
+          Math.round(_resizeInitSize * dist / _resizeInitDist)));
+        renderStickers();
+      }
+    } else if (_dragStickerIdx >= 0 && state.stickerMode) {
       // Drag sticker
       state.stickers[_dragStickerIdx].x = x;
       state.stickers[_dragStickerIdx].y = y;
@@ -900,7 +946,10 @@ lineCanvas.addEventListener("pointerup", e => {
   _dragging     = false;
 
   if (state.stickerMode) {
-    if (_dragStickerIdx >= 0) {
+    if (_resizeStickerIdx >= 0) {
+      _resizeStickerIdx = -1;
+      autosave();
+    } else if (_dragStickerIdx >= 0) {
       if (wasDrag) {
         // Finished drag — finalize sticker position
         autosave();
@@ -926,9 +975,10 @@ lineCanvas.addEventListener("pointerup", e => {
 
 lineCanvas.addEventListener("pointercancel", e => {
   _activePointers.delete(e.pointerId);
-  _pinchStartDist = 0;
-  _pointerStart   = null;
-  _dragging       = false;
+  _pinchStartDist   = 0;
+  _pointerStart     = null;
+  _dragging         = false;
+  _resizeStickerIdx = -1;
 });
 
 // ============================================================
