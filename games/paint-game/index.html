@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#ffcf70">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>Coloring Fun</title>
+  <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================== HOME SCREEN ======================== -->
+  <div id="screen-home" class="screen active">
+    <div class="home-card">
+      <div class="home-title">🎨 Coloring Fun</div>
+      <div class="home-subtitle">Pick a drawing and color it!</div>
+      <div class="home-buttons">
+        <button id="btn-choose-drawing" class="home-btn btn-primary" aria-label="Choose a drawing">
+          <span class="btn-icon">🖼️</span>
+          Choose Drawing
+        </button>
+        <button id="btn-use-photo" class="home-btn btn-secondary" aria-label="Use a photo">
+          <span class="btn-icon">📷</span>
+          Use Photo
+        </button>
+        <button id="btn-open-gallery" class="home-btn btn-gallery" aria-label="My Art Gallery">
+          <span class="btn-icon">🖼</span>
+          My Art Gallery
+        </button>
+      </div>
+      <button id="btn-resume" class="resume-btn" style="display:none" aria-label="Resume last picture">
+        ▶ Resume Last Picture
+      </button>
+      <button id="btn-privacy" class="privacy-btn" aria-label="Privacy information">🔒 Privacy</button>
+    </div>
+  </div>
+
+  <!-- ======================== DRAWING PICKER ======================== -->
+  <div id="drawing-picker" class="picker-overlay" style="display:none" role="dialog" aria-label="Choose a drawing">
+    <div class="picker-card">
+      <div class="picker-header">
+        <div class="picker-header-left">
+          <button id="btn-picker-back" class="picker-back" style="display:none" aria-label="Back to categories">← Back</button>
+          <span id="picker-title" class="picker-title">Choose a Category</span>
+        </div>
+        <button id="btn-picker-close" class="picker-close" aria-label="Close">✕</button>
+      </div>
+      <div id="drawing-grid" class="drawing-grid"></div>
+    </div>
+  </div>
+
+  <!-- ======================== PHOTO STYLE PICKER OVERLAY ======================== -->
+  <div id="photo-style-picker" class="picker-overlay" style="display:none" role="dialog" aria-label="Choose a style">
+    <div class="picker-card picker-card-style">
+      <div class="picker-header">
+        <span class="picker-title">Choose a Style</span>
+        <button id="btn-style-picker-close" class="picker-close" aria-label="Close">✕</button>
+      </div>
+      <div class="style-preview-wrap">
+        <canvas id="style-preview-canvas" width="320" height="240"></canvas>
+      </div>
+      <div class="style-buttons">
+        <button class="style-btn active" data-style="easy">⭐ Easy</button>
+        <button class="style-btn" data-style="bold">✏️ Bold</button>
+        <button class="style-btn" data-style="clean">✨ Clean</button>
+      </div>
+      <div class="style-confirm-wrap">
+        <button id="btn-use-page" class="btn-use-page">✅ Use This Page</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== GALLERY SCREEN ======================== -->
+  <div id="screen-gallery" class="screen">
+    <div class="gallery-topbar">
+      <button id="btn-gallery-back" class="top-btn" aria-label="Back to home">← Back</button>
+      <span class="editor-title">My Art</span>
+    </div>
+    <div class="gallery-content">
+      <div id="gallery-grid" class="gallery-grid"></div>
+      <div id="gallery-empty" class="gallery-empty" style="display:none">
+        <div class="gallery-empty-icon">🎨</div>
+        <div class="gallery-empty-text">No saved art yet!<br>Color something and save it.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== EDITOR SCREEN ======================== -->
+  <div id="screen-editor" class="screen">
+
+    <!-- Top bar -->
+    <div class="editor-topbar">
+      <button id="btn-back" class="top-btn" aria-label="Go back">← Back</button>
+      <span id="editor-title" class="editor-title">Coloring Fun</span>
+      <div class="topbar-right">
+        <button id="btn-print" class="top-btn" aria-label="Print colored page">🖨</button>
+        <button id="btn-download" class="top-btn" aria-label="Download PNG">📥</button>
+        <button id="btn-save" class="top-btn top-btn-save" aria-label="Save to My Art">💾 Save</button>
+      </div>
+    </div>
+
+    <!-- Photo preset controls (only shown in photo mode) -->
+    <div id="photo-presets" class="photo-presets" style="display:none">
+      <button class="preset-btn active" data-preset="easy">Easy</button>
+      <button class="preset-btn" data-preset="bold">Bold</button>
+      <button class="preset-btn" data-preset="clean">Clean</button>
+    </div>
+
+    <!-- Canvas stage -->
+    <div class="canvas-stage" id="canvas-stage">
+      <!-- canvas-inner: zoom/pan transform applied here -->
+      <div id="canvas-inner">
+        <!-- paintCanvas: user's colors (z:1, bottom layer) -->
+        <canvas id="paintCanvas"></canvas>
+        <!-- stickerCanvas: stickers (z:2, above paint) -->
+        <canvas id="stickerCanvas"></canvas>
+        <!-- lineCanvas: black outlines (z:3, receives pointer events) -->
+        <canvas id="lineCanvas"></canvas>
+        <!-- effectsCanvas: glitter particles (z:4, top layer, no pointer events) -->
+        <canvas id="effectsCanvas"></canvas>
+        <!-- maskCanvas: hidden binary barrier map — never displayed -->
+        <canvas id="maskCanvas" style="display:none"></canvas>
+      </div>
+      <!-- Zoom controls — outside canvas-inner so they don't scale -->
+      <div class="zoom-controls" id="zoom-controls" style="display:none">
+        <button id="btn-zoom-out" class="zoom-btn" aria-label="Zoom out">−</button>
+        <span id="zoom-label" class="zoom-label">1×</span>
+        <button id="btn-zoom-in" class="zoom-btn" aria-label="Zoom in">+</button>
+      </div>
+    </div>
+
+    <!-- Status pill -->
+    <div id="status-pill" class="status-pill" style="display:none"></div>
+
+    <!-- Fill mode row -->
+    <div class="fill-modes" id="fill-modes">
+      <button class="fill-btn active" data-mode="solid" aria-label="Solid fill">🎨 Solid</button>
+      <button class="fill-btn" data-mode="rainbow" aria-label="Rainbow fill">🌈 Rainbow</button>
+      <button class="fill-btn" data-mode="glitter" aria-label="Glitter fill">✨ Glitter</button>
+      <button class="fill-btn" data-mode="sticker" aria-label="Add stickers">⭐ Stickers</button>
+    </div>
+
+    <!-- Sticker tray (shown when sticker mode active) -->
+    <div id="sticker-tray" class="sticker-tray" style="display:none">
+      <div id="sticker-grid" class="sticker-grid"></div>
+      <button id="btn-delete-sticker" class="sticker-delete-btn" aria-label="Delete selected sticker">🗑 Delete</button>
+    </div>
+
+    <!-- Color palette -->
+    <div class="palette" id="palette" role="group" aria-label="Color palette"></div>
+
+    <!-- Action buttons -->
+    <div class="editor-actions">
+      <button id="btn-undo" class="action-btn" aria-label="Undo last fill">↩ Undo</button>
+      <button id="btn-clear" class="action-btn" aria-label="Clear all colors">🗑 Clear</button>
+    </div>
+
+  </div>
+
+  <!-- Hidden photo file input -->
+  <input type="file" id="photo-input" accept="image/*" style="display:none" aria-label="Upload photo">
+
+  <!-- ======================== PRIVACY MODAL ======================== -->
+  <div id="privacy-modal" class="privacy-modal-overlay" style="display:none" role="dialog" aria-modal="true" aria-label="Privacy information">
+    <div class="privacy-modal-card">
+      <button id="btn-privacy-close" class="privacy-modal-close" aria-label="Close">✕</button>
+      <div class="privacy-modal-title">🔒 Privacy &amp; Your Data</div>
+      <div class="privacy-modal-body">
+        <p><strong>We do not collect any data. None. Ever.</strong></p>
+        <ul>
+          <li>Your artwork and sessions are saved <strong>only on this device</strong>, using your browser's local storage.</li>
+          <li>No data is ever sent to any server.</li>
+          <li>No analytics, no tracking, no cookies, no accounts.</li>
+          <li>We have no way of knowing you exist — and that's intentional.</li>
+        </ul>
+        <p class="privacy-delete-note">To delete your saved artwork, clear your browser or app storage in your device settings.</p>
+      </div>
+      <div class="privacy-modal-footer">
+        Built with <a href="https://claude.ai/claude-code" target="_blank" rel="noopener">Claude Code</a> · Artwork stays on your device
+      </div>
+    </div>
+  </div>
+
+  <!-- Libraries (vendored locally) -->
+  <script src="libs/ort.min.js"></script>
+  <script src="libs/load-image.min.js"></script>
+  <script src="libs/jsfeat-min.js"></script>
+  <script src="libs/floodfill.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
