@@ -691,6 +691,70 @@ html, body {
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
+/* ── Tool tabs (Fill / Brush) ── */
+.tool-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 6px 12px 4px;
+  background: var(--clr-white);
+  border-top: 2px solid #f0f0f0;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 100%;
+}
+.tool-tab {
+  flex: 1;
+  max-width: 140px;
+  padding: 7px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: var(--radius-pill);
+  background: var(--clr-white);
+  font-family: inherit;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  font-weight: 700;
+  cursor: pointer;
+  color: #888;
+  transition: all 0.12s;
+}
+.tool-tab.active {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+  background: #fff3e8;
+}
+.tool-tab:active { transform: scale(0.95); }
+
+/* ── Brush size picker ── */
+.brush-options {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 6px 12px 4px;
+  background: var(--clr-white);
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  width: 100%;
+}
+.brush-size-btn {
+  border: 3px solid #e0e0e0;
+  border-radius: 50%;
+  background: var(--clr-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  transition: border-color 0.12s, transform 0.1s;
+  line-height: 1;
+}
+.brush-size-btn:nth-child(1) { font-size: 0.6rem;  width: 34px; height: 34px; }
+.brush-size-btn:nth-child(2) { font-size: 1.3rem;  width: 44px; height: 44px; }
+.brush-size-btn:nth-child(3) { font-size: 2rem;    width: 54px; height: 54px; }
+.brush-size-btn.active {
+  border-color: var(--clr-primary);
+  color: var(--clr-primary);
+}
+.brush-size-btn:active { transform: scale(0.92); }
+
 /* Fill mode row */
 .fill-modes {
   display: flex;
@@ -926,6 +990,12 @@ html, body {
     min-height: 38px;
     font-size: 0.9rem;
   }
+  .tool-tabs { padding: 4px 8px 3px; gap: 6px; }
+  .tool-tab   { font-size: 0.75rem; padding: 5px 6px; }
+  .brush-options { gap: 12px; padding: 4px 8px 3px; }
+  .brush-size-btn:nth-child(1) { width: 28px; height: 28px; font-size: 0.5rem; }
+  .brush-size-btn:nth-child(2) { width: 36px; height: 36px; font-size: 1rem; }
+  .brush-size-btn:nth-child(3) { width: 46px; height: 46px; font-size: 1.6rem; }
   .fill-modes {
     padding: 3px 8px;
     gap: 4px;
@@ -969,6 +1039,12 @@ html, body {
     min-height: 34px;
     font-size: 0.85rem;
   }
+  .tool-tabs { padding: 3px 8px 2px; gap: 4px; }
+  .tool-tab   { font-size: 0.7rem; padding: 4px 6px; }
+  .brush-options { gap: 10px; padding: 3px 8px 2px; }
+  .brush-size-btn:nth-child(1) { width: 26px; height: 26px; font-size: 0.45rem; }
+  .brush-size-btn:nth-child(2) { width: 32px; height: 32px; font-size: 0.9rem; }
+  .brush-size-btn:nth-child(3) { width: 40px; height: 40px; font-size: 1.4rem; }
   .fill-modes {
     padding: 2px 8px;
     gap: 4px;

@@ -176,6 +176,8 @@ const state = {
   zoom:                 1,
   panX:                 0,
   panY:                 0,
+  activeTool:           "fill",   // "fill" | "brush"
+  brushWidth:           16,       // canvas pixels
 };
 
 // ============================================================
@@ -843,8 +845,22 @@ function setFillMode(mode) {
 }
 
 // ============================================================
+// TOOL SELECTION
+// ============================================================
+function setActiveTool(tool) {
+  state.activeTool = tool;
+  document.querySelectorAll(".tool-tab").forEach(b =>
+    b.classList.toggle("active", b.dataset.tool === tool));
+  $id("fill-modes").style.display    = tool === "fill"  ? "flex" : "none";
+  $id("brush-options").style.display = tool === "brush" ? "flex" : "none";
+  if (tool === "brush") toggleStickerMode(false);
+}
+
+// ============================================================
 // POINTER EVENTS ON LINE CANVAS
 // ============================================================
+let _brushActive      = false;  // true while drawing a brush stroke
+let _lastBrushPos     = null;   // {x,y} last point for smooth strokes
 let _pointerStart     = null;  // {x, y} canvas coords at touch start
 let _dragStickerIdx   = -1;    // index of sticker being dragged, or -1
 let _resizeStickerIdx = -1;    // index of sticker being resized, or -1
@@ -892,6 +908,16 @@ lineCanvas.addEventListener("pointerdown", e => {
         renderStickers();
       }
     }
+  } else if (state.activeTool === "brush") {
+    pushHistory();
+    paintCtx.beginPath();
+    paintCtx.lineCap     = "round";
+    paintCtx.lineJoin    = "round";
+    paintCtx.lineWidth   = state.brushWidth;
+    paintCtx.strokeStyle = state.selectedColor;
+    paintCtx.moveTo(x, y);
+    _brushActive  = true;
+    _lastBrushPos = { x, y };
   }
 });
 
@@ -919,6 +945,19 @@ lineCanvas.addEventListener("pointermove", e => {
 
   if (!_dragging && (Math.abs(dx) > 5 || Math.abs(dy) > 5)) {
     _dragging = true;
+  }
+
+  if (state.activeTool === "brush" && _brushActive && _pointerStart) {
+    paintCtx.lineTo(x, y);
+    paintCtx.stroke();
+    paintCtx.beginPath();
+    paintCtx.moveTo(x, y);
+    _lastBrushPos = { x, y };
+    if (!_dragging && (Math.abs(x - _pointerStart.x) > 2 || Math.abs(y - _pointerStart.y) > 2)) {
+      _dragging = true;
+    }
+    _lastClientPos = { x: e.clientX, y: e.clientY };
+    return;
   }
 
   if (_dragging) {
@@ -981,6 +1020,20 @@ lineCanvas.addEventListener("pointerup", e => {
       state.selectedStickerIdx = -1;
       renderStickers();
     }
+  } else if (state.activeTool === "brush") {
+    if (_brushActive) {
+      if (!wasDrag) {
+        // Tap with no drag → draw a dot
+        paintCtx.beginPath();
+        paintCtx.arc(x, y, state.brushWidth / 2, 0, Math.PI * 2);
+        paintCtx.fillStyle = state.selectedColor;
+        paintCtx.fill();
+      }
+      _brushActive  = false;
+      _lastBrushPos = null;
+      autosave();
+      checkCompletion();
+    }
   } else {
     // Fill only on tap (not drag — drag pans when zoomed)
     if (!wasDrag) {
@@ -996,6 +1049,8 @@ lineCanvas.addEventListener("pointercancel", e => {
   _pinchStartDist   = 0;
   _pointerStart     = null;
   _dragging         = false;
+  _brushActive      = false;
+  _lastBrushPos     = null;
   _resizeStickerIdx = -1;
 });
 
@@ -2049,6 +2104,18 @@ function bindEvents() {
   document.querySelectorAll(".preset-btn").forEach(btn => {
     btn.addEventListener("click", () => onPresetChange(btn.dataset.preset));
   });
+
+  // Tool tabs (Fill / Brush)
+  document.querySelectorAll(".tool-tab").forEach(btn =>
+    btn.addEventListener("click", () => setActiveTool(btn.dataset.tool)));
+
+  // Brush size buttons
+  document.querySelectorAll(".brush-size-btn").forEach(btn =>
+    btn.addEventListener("click", () => {
+      state.brushWidth = parseInt(btn.dataset.size, 10);
+      document.querySelectorAll(".brush-size-btn").forEach(b =>
+        b.classList.toggle("active", b === btn));
+    }));
 
   // Fill mode buttons
   document.querySelectorAll(".fill-btn").forEach(btn => {
