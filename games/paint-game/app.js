@@ -719,17 +719,24 @@ function renderStickers() {
   stickerCtx.textBaseline = "middle";
 
   state.stickers.forEach((s, idx) => {
-    const sz = s.size || defaultSz;
+    const sz  = s.size || defaultSz;
+    const rot = s.rotation || 0;
     stickerCtx.font = `${sz}px serif`;
+
     if (idx === state.selectedStickerIdx) {
       const half = Math.floor(sz * 0.6);
-      // Selection box
+      // Selection box — drawn in sticker's rotated local space
+      stickerCtx.save();
+      stickerCtx.translate(s.x, s.y);
+      stickerCtx.rotate(rot);
       stickerCtx.strokeStyle = "#ff8c42";
       stickerCtx.lineWidth   = 4;
-      stickerCtx.strokeRect(s.x - half, s.y - half, half * 2, half * 2);
-      // Resize handle — filled circle at bottom-right corner
-      const hx = s.x + half;
-      const hy = s.y + half;
+      stickerCtx.strokeRect(-half, -half, half * 2, half * 2);
+      stickerCtx.restore();
+
+      // Handle world position: local corner (half, half) rotated to world
+      const hx = s.x + half * (Math.cos(rot) - Math.sin(rot));
+      const hy = s.y + half * (Math.sin(rot) + Math.cos(rot));
       stickerCtx.beginPath();
       stickerCtx.arc(hx, hy, 14, 0, Math.PI * 2);
       stickerCtx.fillStyle = "#ff8c42";
@@ -738,7 +745,13 @@ function renderStickers() {
       stickerCtx.lineWidth   = 2;
       stickerCtx.stroke();
     }
-    stickerCtx.fillText(s.emoji, s.x, s.y);
+
+    // Emoji — drawn in sticker's rotated local space
+    stickerCtx.save();
+    stickerCtx.translate(s.x, s.y);
+    stickerCtx.rotate(rot);
+    stickerCtx.fillText(s.emoji, 0, 0);
+    stickerCtx.restore();
   });
 }
 
@@ -760,9 +773,10 @@ function findResizeHandleAt(x, y) {
   if (idx < 0) return -1;
   const s    = state.stickers[idx];
   const sz   = s.size || Math.floor(state.canvasWidth / 14);
+  const rot  = s.rotation || 0;
   const half = Math.floor(sz * 0.6);
-  const hx   = s.x + half;
-  const hy   = s.y + half;
+  const hx   = s.x + half * (Math.cos(rot) - Math.sin(rot));
+  const hy   = s.y + half * (Math.sin(rot) + Math.cos(rot));
   const dx   = x - hx;
   const dy   = y - hy;
   return Math.sqrt(dx*dx + dy*dy) <= 22 ? idx : -1;
@@ -770,7 +784,7 @@ function findResizeHandleAt(x, y) {
 
 function placeSticker(x, y) {
   if (!state.pendingSticker) return;
-  state.stickers.push({ emoji: state.pendingSticker, x, y, size: Math.floor(state.canvasWidth / 14) });
+  state.stickers.push({ emoji: state.pendingSticker, x, y, size: Math.floor(state.canvasWidth / 14), rotation: 0 });
   state.selectedStickerIdx = state.stickers.length - 1;
   renderStickers();
   autosave();
@@ -909,14 +923,18 @@ lineCanvas.addEventListener("pointermove", e => {
 
   if (_dragging) {
     if (_resizeStickerIdx >= 0 && state.stickerMode) {
-      // Resize sticker
-      const s    = state.stickers[_resizeStickerIdx];
-      const dist = Math.sqrt((x - s.x) ** 2 + (y - s.y) ** 2);
-      if (_resizeInitDist > 0) {
+      // Resize + rotate sticker via single handle
+      // Angle from center to pointer → sticker rotation (handle sits at 45° in local space)
+      // Distance from center to pointer → sticker size  (handle sits at half*√2 from center)
+      const s  = state.stickers[_resizeStickerIdx];
+      const dx = x - s.x, dy = y - s.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+      if (dist > 4) {
+        s.rotation = Math.atan2(dy, dx) - Math.PI / 4;
         const minSz = Math.floor(state.canvasWidth / 28);
         const maxSz = Math.floor(state.canvasWidth / 4);
         s.size = Math.min(maxSz, Math.max(minSz,
-          Math.round(_resizeInitSize * dist / _resizeInitDist)));
+          Math.round(dist / (0.6 * Math.SQRT2))));
         renderStickers();
       }
     } else if (_dragStickerIdx >= 0 && state.stickerMode) {
